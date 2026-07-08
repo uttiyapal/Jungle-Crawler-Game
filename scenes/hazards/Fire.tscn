@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dm4s114l8bdw7"]
+
+[ext_resource type="Texture2D" uid="uid://d3gkmnc7mfrrb" path="res://assets/graphics/objects/Fire1.png" id="1_pbqf5"]
+[ext_resource type="Script" uid="uid://w7y2mimuntc8" path="res://scripts/hazards/fire.gd" id="1_y8fyu"]
+[ext_resource type="Texture2D" uid="uid://gemv2kq1gqya" path="res://assets/graphics/objects/Fire2.png" id="2_y8fyu"]
+[ext_resource type="Texture2D" uid="uid://qvx518vb66hw" path="res://assets/graphics/objects/Fire3.png" id="3_fhwfn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_63fp0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pbqf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_y8fyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fhwfn")
+}],
+"loop": true,
+"name": &"Burn",
+"speed": 5.0
+}]
+
+[node name="Fire" type="Area2D" unique_id=317862174]
+script = ExtResource("1_y8fyu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=265067199]
+sprite_frames = SubResource("SpriteFrames_63fp0")
+animation = &"Burn"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=228113011]
+polygon = PackedVector2Array(-15, 12, -12, 10, -5, 11, -8, 6, -8, -1, -1, -10, 8, -1, 9, 7, 7, 11, 12, 11, 15, 14, 15, 16, -15, 16)

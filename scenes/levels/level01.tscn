@@ -1,0 +1,89 @@
+[gd_scene format=4 uid="uid://cee6q8y7jovq1"]
+
+[ext_resource type="Texture2D" uid="uid://cjar7xpgef2rb" path="res://assets/graphics/backgrounds/background_brickwall.jpg" id="1_g0jr5"]
+[ext_resource type="Texture2D" uid="uid://d1fyhxnrher1o" path="res://assets/tiles/Blocks (16 x 16).png" id="2_i4uh8"]
+[ext_resource type="PackedScene" uid="uid://dqml1hw3vvld0" path="res://scenes/objects/ExitDoor.tscn" id="3_g0jr5"]
+[ext_resource type="PackedScene" uid="uid://dkyfhbwo75en5" path="res://scenes/collectibles/Gem.tscn" id="4_i4uh8"]
+[ext_resource type="PackedScene" uid="uid://obghft67cg0g" path="res://scenes/collectibles/Key.tscn" id="5_qwlqn"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_msin7"]
+texture = ExtResource("2_i4uh8")
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+7:1/0 = 0
+9:1/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+4:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+9:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_g0jr5"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_msin7")
+
+[node name="Level01" type="Node2D" unique_id=602118488]
+metadata/_edit_horizontal_guides_ = [529.0]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=74425266]
+position = Vector2(159.75, 639.5)
+scale = Vector2(0.1658854, 0.13802078)
+texture = ExtResource("1_g0jr5")
+
+[node name="World" type="Node2D" parent="." unique_id=684069849]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="World" unique_id=371101068]
+tile_map_data = PackedByteArray("AAAAACwAAAABAAEAAAABACwAAAABAAEAAAACACwAAAABAAEAAAADACwAAAABAAEAAAAEACwAAAABAAEAAAAFACwAAAABAAEAAAAGACwAAAABAAEAAAAHACwAAAABAAEAAAAIACwAAAABAAEAAAAJACwAAAABAAEAAAAKACwAAAABAAEAAAALACwAAAABAAEAAAAMACwAAAABAAEAAAANACwAAAABAAEAAAAOACwAAAABAAEAAAAPACwAAAABAAEAAAAQACwAAAABAAEAAAARACwAAAABAAEAAAASACwAAAABAAEAAAATACwAAAABAAEAAAABACMAAAABAAEAAAACACMAAAABAAEAAAADACMAAAABAAEAAAAEACMAAAABAAEAAAAFACMAAAABAAEAAAAGACMAAAABAAEAAAAHACMAAAABAAEAAAAIACMAAAABAAEAAAAJACMAAAABAAEAAAAKACMAAAABAAEAAAALACMAAAABAAEAAAAMACMAAAABAAEAAAANACMAAAABAAEAAAAOACMAAAABAAEAAAAPACMAAAABAAEAAAAQACMAAAABAAEAAAARACMAAAABAAEAAAASACMAAAABAAEAAAATACMAAAABAAEAAAATACQAAAABAAEAAAATACUAAAABAAEAAAATACYAAAABAAEAAAATACcAAAABAAEAAAATACgAAAABAAEAAAATACkAAAABAAEAAAATACoAAAABAAEAAAATACsAAAABAAEAAAABACcAAAABAAEAAAADACoAAAABAAEAAAAEACoAAAABAAEAAAADACYAAAABAAEAAAAFACgAAAABAAEAAAAFACoAAAABAAEAAAAGACoAAAABAAEAAAAHACYAAAABAAEAAAAJACgAAAABAAEAAAALACYAAAABAAEAAAANACgAAAABAAEAAAAPACYAAAABAAEAAAASACgAAAABAAEAAAANACoAAAABAAEAAAAOACoAAAABAAEAAAAPACoAAAABAAEAAAAQACoAAAABAAEAAAARACoAAAABAAEAAAALACoAAAABAAEAAAAMACoAAAABAAEAAAALACsAAAABAAEAAAAAACMAAAABAAEAAAAAACQAAAABAAEAAAAAACUAAAABAAEAAAAAACYAAAABAAEAAAAAACcAAAABAAEAAAAAACgAAAABAAEAAAAAACkAAAABAAEAAAAAACoAAAABAAEAAAAAACsAAAABAAEAAAA=")
+tile_set = SubResource("TileSet_g0jr5")
+
+[node name="Entities" type="Node2D" parent="." unique_id=601587571]
+
+[node name="ExitDoor" parent="Entities" unique_id=1589347372 instance=ExtResource("3_g0jr5")]
+position = Vector2(199, 696)
+
+[node name="Gem" type="Node" parent="Entities" unique_id=1702107048]
+
+[node name="Gem" parent="Entities/Gem" unique_id=376977436 instance=ExtResource("4_i4uh8")]
+position = Vector2(24, 616)
+
+[node name="Gem2" parent="Entities/Gem" unique_id=1317152921 instance=ExtResource("4_i4uh8")]
+position = Vector2(24, 650)
+
+[node name="Gem3" parent="Entities/Gem" unique_id=213327949 instance=ExtResource("4_i4uh8")]
+position = Vector2(56, 599)
+
+[node name="Gem4" parent="Entities/Gem" unique_id=1627893517 instance=ExtResource("4_i4uh8")]
+position = Vector2(88, 631)
+
+[node name="Gem5" parent="Entities/Gem" unique_id=1594797353 instance=ExtResource("4_i4uh8")]
+position = Vector2(107, 663)
+
+[node name="Gem6" parent="Entities/Gem" unique_id=1366456383 instance=ExtResource("4_i4uh8")]
+position = Vector2(120, 600)
+
+[node name="Gem7" parent="Entities/Gem" unique_id=1378125342 instance=ExtResource("4_i4uh8")]
+position = Vector2(152, 631)
+
+[node name="Gem8" parent="Entities/Gem" unique_id=248675004 instance=ExtResource("4_i4uh8")]
+position = Vector2(249, 600)
+
+[node name="Gem9" parent="Entities/Gem" unique_id=770267069 instance=ExtResource("4_i4uh8")]
+position = Vector2(216, 632)
+
+[node name="Gem10" parent="Entities/Gem" unique_id=1703304560 instance=ExtResource("4_i4uh8")]
+position = Vector2(295, 632)
+
+[node name="Key" parent="Entities" unique_id=755897272 instance=ExtResource("5_qwlqn")]
+position = Vector2(183, 598)
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=2040751010]
+
+[node name="PlayerSpawn" type="Marker2D" parent="SpawnPoints" unique_id=1890973985]
+position = Vector2(30, 690)

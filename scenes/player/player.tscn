@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bqaxdcj1xuv27"]
+
+[ext_resource type="Script" uid="uid://b84d6m4lbtkou" path="res://scripts/player/player.gd" id="1_8afob"]
+[ext_resource type="Texture2D" uid="uid://dkqnqg43c7xy0" path="res://assets/graphics/characters/Idle (1).png" id="2_dovo2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
+size = Vector2(5.5, 13.75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gmlin"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dovo2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=1822515264 groups=["Player"]]
+script = ExtResource("1_8afob")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1903091020]
+rotation = -3.1415925
+shape = SubResource("RectangleShape2D_dovo2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=25982794]
+position = Vector2(-2, -1.0000019)
+scale = Vector2(0.033, 0.035)
+sprite_frames = SubResource("SpriteFrames_gmlin")
+
+[node name="GunMarker" type="Marker2D" parent="." unique_id=2093894540]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=393331827]
+zoom = Vector2(5, 5)
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+
+[node name="GroundCheck" type="RayCast2D" parent="." unique_id=636658453]

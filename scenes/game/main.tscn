@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://dfo0o4s1esjkc"]
+
+[ext_resource type="Script" uid="uid://bllqw3oc7ywvc" path="res://scripts/manager/main.gd" id="1_llaio"]
+[ext_resource type="PackedScene" uid="uid://bqaxdcj1xuv27" path="res://scenes/player/player.tscn" id="2_oekm8"]
+[ext_resource type="Script" uid="uid://dvet8woq3c65b" path="res://scripts/game/hud.gd" id="3_yd8kv"]
+
+[node name="Main" type="Node" unique_id=402348827]
+script = ExtResource("1_llaio")
+
+[node name="CurrentLevel" type="Node2D" parent="." unique_id=1743230787]
+position = Vector2(0, -1)
+
+[node name="Player" parent="." unique_id=1822515264 instance=ExtResource("2_oekm8")]
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1656849690]
+script = ExtResource("3_yd8kv")
+
+[node name="TopBar" type="Control" parent="HUD" unique_id=2028632857]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="HUD/TopBar" unique_id=603982085]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 50.0
+
+[node name="ScoreLabel" type="Label" parent="HUD/TopBar" unique_id=1176870634]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 43.0
+text = "SCORE: 000000"
+
+[node name="LivesLabel" type="Label" parent="HUD/TopBar" unique_id=2097898295]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 20.0
+offset_right = 279.0
+offset_bottom = 43.0
+text = "LIVES: 3"
+
+[node name="KeyLabel" type="Label" parent="HUD/TopBar" unique_id=1091404570]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 20.0
+offset_right = 483.0
+offset_bottom = 43.0
+text = "KEY: NO"
+
+[node name="HealthLabel" type="Label" parent="HUD/TopBar" unique_id=794728690]
+layout_mode = 0
+offset_left = 620.0
+offset_top = 20.0
+offset_right = 660.0
+offset_bottom = 43.0
+
+[node name="GunLabel" type="Label" parent="HUD/TopBar" unique_id=623444064]
+layout_mode = 0
+offset_left = 820.0
+offset_top = 20.0
+offset_right = 860.0
+offset_bottom = 43.0
+
+[node name="JetpackLabel" type="Label" parent="HUD/TopBar" unique_id=849360343]
+layout_mode = 0
+offset_left = 1020.0
+offset_top = 20.0
+offset_right = 1060.0
+offset_bottom = 43.0
+
+[node name="PauseMenu" type="Node" parent="." unique_id=1207636030]

@@ -1,0 +1,220 @@
+[gd_scene format=4 uid="uid://ihst7axk28ma"]
+
+[ext_resource type="Texture2D" uid="uid://cjar7xpgef2rb" path="res://assets/graphics/backgrounds/background_brickwall.jpg" id="1_g0jr5"]
+[ext_resource type="Texture2D" uid="uid://d1fyhxnrher1o" path="res://assets/tiles/Blocks (16 x 16).png" id="2_i4uh8"]
+[ext_resource type="PackedScene" uid="uid://dqml1hw3vvld0" path="res://scenes/objects/ExitDoor.tscn" id="3_g0jr5"]
+[ext_resource type="PackedScene" uid="uid://obghft67cg0g" path="res://scenes/collectibles/Key.tscn" id="4_4m5u4"]
+[ext_resource type="PackedScene" uid="uid://dkyfhbwo75en5" path="res://scenes/collectibles/Gem.tscn" id="4_cudmn"]
+[ext_resource type="PackedScene" uid="uid://dm4s114l8bdw7" path="res://scenes/hazards/Fire.tscn" id="5_oek6g"]
+[ext_resource type="PackedScene" uid="uid://b0yd6mr2ummhe" path="res://scenes/hazards/Lava.tscn" id="7_1wv6l"]
+[ext_resource type="PackedScene" uid="uid://cjajv6wu4ai4f" path="res://scenes/collectibles/Gun.tscn" id="8_70imb"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_msin7"]
+texture = ExtResource("2_i4uh8")
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+7:1/0 = 0
+9:1/0 = 0
+9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+2:3/0 = 0
+4:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+9:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_g0jr5"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_msin7")
+
+[node name="Level01" type="Node2D" unique_id=602118488]
+metadata/_edit_horizontal_guides_ = [529.0]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=74425266]
+position = Vector2(392.50003, 519)
+scale = Vector2(0.4088542, 0.3489583)
+texture = ExtResource("1_g0jr5")
+
+[node name="World" type="Node2D" parent="." unique_id=684069849]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="World" unique_id=371101068]
+tile_map_data = PackedByteArray("AAAAACQAAAABAAEAAAAAACUAAAABAAEAAAAAACYAAAABAAEAAAAAACcAAAABAAEAAAAAACgAAAABAAEAAAAAACkAAAABAAEAAAAAACoAAAABAAEAAAAAACsAAAABAAEAAAAAACwAAAABAAEAAAAJACkAAAABAAEAAAAJACoAAAABAAEAAAAJACsAAAABAAEAAAAJACwAAAABAAEAAAAOACkAAAABAAEAAAAOACoAAAABAAEAAAAOACsAAAABAAEAAAAOACwAAAABAAEAAAAAACMAAAABAAEAAAABACMAAAABAAEAAAABACYAAAAJAAEAAAABACwAAAABAAEAAAACACMAAAABAAEAAAACACgAAAAJAAEAAAACACwAAAABAAEAAAADACMAAAABAAEAAAADACgAAAAJAAEAAAAEACMAAAABAAEAAAAEACYAAAAJAAEAAAAEACoAAAAJAAEAAAAFACMAAAABAAEAAAAFACoAAAAJAAEAAAAGACMAAAABAAEAAAAGACoAAAAJAAEAAAAHACMAAAABAAEAAAAIACMAAAABAAEAAAAIACgAAAAJAAEAAAAJACMAAAABAAEAAAAJACgAAAAJAAEAAAAKACMAAAABAAEAAAAKACgAAAAJAAEAAAALACMAAAABAAEAAAALACoAAAAJAAEAAAAMACMAAAABAAEAAAANACMAAAABAAEAAAANACcAAAAJAAEAAAANACwAAAAJAAEAAAAOACMAAAABAAEAAAAOACgAAAABAAEAAAAPACMAAAABAAEAAAAQACgAAAAJAAEAAAARACgAAAAJAAEAAAASACgAAAAJAAEAAAATACgAAAAJAAEAAAAUACgAAAAJAAEAAAAWACcAAAABAAEAAAAWACgAAAABAAEAAAAWACkAAAABAAEAAAAWACoAAAABAAEAAAAWACsAAAABAAEAAAAWACwAAAABAAEAAAAXACYAAAABAAEAAAAYACUAAAABAAEAAAAZACUAAAABAAEAAAAaACUAAAABAAEAAAAbACUAAAABAAEAAAAcACUAAAABAAEAAAAXACcAAAABAAEAAAAYACYAAAABAAEAAAAQACMAAAABAAEAAAARACMAAAABAAEAAAASACMAAAABAAEAAAATACMAAAABAAEAAAAUACMAAAABAAEAAAAVACMAAAABAAEAAAAWACMAAAABAAEAAAAXACMAAAABAAEAAAAYACMAAAABAAEAAAAZACMAAAABAAEAAAAaACMAAAABAAEAAAAbACMAAAABAAEAAAAcACMAAAABAAEAAAAdACMAAAABAAEAAAAXACwAAAABAAEAAAAYACwAAAABAAEAAAAZACwAAAABAAEAAAAaACwAAAABAAEAAAAeACMAAAABAAEAAAAeACQAAAABAAEAAAAeACUAAAABAAEAAAAeACYAAAABAAEAAAAeACcAAAABAAEAAAAdACcAAAABAAEAAAAcACcAAAABAAEAAAAbACcAAAABAAEAAAAaACcAAAABAAEAAAAZACgAAAABAAEAAAAYACkAAAABAAEAAAAYACoAAAABAAEAAAAaACsAAAABAAEAAAAaACoAAAABAAEAAAAbACoAAAABAAEAAAAdACgAAAABAAEAAAAdACkAAAABAAEAAAAdACoAAAABAAEAAAAbACwAAAABAAEAAAAcACwAAAABAAEAAAAdACwAAAABAAEAAAAeACwAAAABAAEAAAAfACwAAAABAAEAAAAgACwAAAABAAEAAAAgACsAAAABAAEAAAAgACoAAAABAAEAAAAfACoAAAABAAEAAAAgACkAAAABAAEAAAAfACMAAAABAAEAAAAfACQAAAABAAEAAAAfACUAAAABAAEAAAAfACYAAAABAAEAAAAfACcAAAABAAEAAAAgACcAAAABAAEAAAAhACcAAAABAAEAAAAiACcAAAABAAEAAAAiACgAAAABAAEAAAAiACkAAAABAAEAAAAhACwAAAABAAEAAAAiACwAAAABAAEAAAAjACwAAAABAAEAAAAgACMAAAABAAEAAAAhACMAAAABAAEAAAAiACMAAAABAAEAAAAjACMAAAABAAEAAAAkACMAAAABAAEAAAAlACMAAAABAAEAAAAmACMAAAABAAEAAAAjACsAAAABAAEAAAAkACwAAAABAAEAAAAlACwAAAABAAEAAAAkACkAAAABAAEAAAAlACkAAAABAAEAAAAlACUAAAABAAEAAAAlACYAAAABAAEAAAAlACcAAAABAAEAAAAlACgAAAABAAEAAAAlACoAAAABAAEAAAAlACsAAAABAAEAAAAhACUAAAABAAEAAAAiACUAAAABAAEAAAAjACUAAAABAAEAAAAkACUAAAABAAEAAAAmACUAAAABAAEAAAAnACUAAAABAAEAAAAoACUAAAABAAEAAAApACUAAAABAAEAAAAqACUAAAABAAEAAAArACUAAAABAAEAAAAsACUAAAABAAEAAAAtACUAAAABAAEAAAAnACMAAAABAAEAAAAoACMAAAABAAEAAAApACMAAAABAAEAAAAqACMAAAABAAEAAAArACMAAAABAAEAAAAsACMAAAABAAEAAAAtACMAAAABAAEAAAAuACMAAAABAAEAAAAvACMAAAABAAEAAAAvACQAAAABAAEAAAAvACUAAAABAAEAAAAuACUAAAABAAEAAAAwACMAAAABAAEAAAAwACQAAAABAAEAAAAwACUAAAABAAEAAAA=")
+tile_set = SubResource("TileSet_g0jr5")
+
+[node name="Entities" type="Node2D" parent="." unique_id=601587571]
+
+[node name="ExitDoor" parent="Entities" unique_id=1589347372 instance=ExtResource("3_g0jr5")]
+position = Vector2(745, 584)
+
+[node name="Gems" type="Node" parent="Entities" unique_id=103135330]
+
+[node name="Gem" parent="Entities/Gems" unique_id=376977436 instance=ExtResource("4_cudmn")]
+position = Vector2(24, 585)
+
+[node name="Gem2" parent="Entities/Gems" unique_id=1657841218 instance=ExtResource("4_cudmn")]
+position = Vector2(134, 693)
+
+[node name="Gem3" parent="Entities/Gems" unique_id=1945405338 instance=ExtResource("4_cudmn")]
+position = Vector2(169, 697)
+
+[node name="Gem4" parent="Entities/Gems" unique_id=725062570 instance=ExtResource("4_cudmn")]
+position = Vector2(584, 696)
+
+[node name="Gem5" parent="Entities/Gems" unique_id=1577343818 instance=ExtResource("4_cudmn")]
+position = Vector2(265, 673)
+
+[node name="Gem6" parent="Entities/Gems" unique_id=173687039 instance=ExtResource("4_cudmn")]
+position = Vector2(281, 673)
+
+[node name="Gem7" parent="Entities/Gems" unique_id=119184583 instance=ExtResource("4_cudmn")]
+position = Vector2(297, 673)
+
+[node name="Gem8" parent="Entities/Gems" unique_id=1040206329 instance=ExtResource("4_cudmn")]
+position = Vector2(313, 673)
+
+[node name="Gem9" parent="Entities/Gems" unique_id=1772809142 instance=ExtResource("4_cudmn")]
+position = Vector2(329, 673)
+
+[node name="Gem10" parent="Entities/Gems" unique_id=369209229 instance=ExtResource("4_cudmn")]
+position = Vector2(327, 587)
+
+[node name="Gem11" parent="Entities/Gems" unique_id=514521328 instance=ExtResource("4_cudmn")]
+position = Vector2(454, 649)
+
+[node name="Gem12" parent="Entities/Gems" unique_id=235344447 instance=ExtResource("4_cudmn")]
+position = Vector2(441, 696)
+
+[node name="Gem13" parent="Entities/Gems" unique_id=533621999 instance=ExtResource("4_cudmn")]
+position = Vector2(503, 696)
+
+[node name="Key" parent="Entities" unique_id=755897272 instance=ExtResource("4_4m5u4")]
+position = Vector2(208, 676)
+
+[node name="Fire" type="Node" parent="Entities" unique_id=1518479255]
+
+[node name="Fire" parent="Entities/Fire" unique_id=317862174 instance=ExtResource("5_oek6g")]
+position = Vector2(624, 619)
+
+[node name="Fire2" parent="Entities/Fire" unique_id=1969640374 instance=ExtResource("5_oek6g")]
+position = Vector2(655, 619)
+
+[node name="Fire3" parent="Entities/Fire" unique_id=201157878 instance=ExtResource("5_oek6g")]
+position = Vector2(686, 619)
+
+[node name="Fire4" parent="Entities/Fire" unique_id=1481580197 instance=ExtResource("5_oek6g")]
+position = Vector2(686, 645)
+
+[node name="Fire5" parent="Entities/Fire" unique_id=795839637 instance=ExtResource("5_oek6g")]
+position = Vector2(686, 671)
+
+[node name="Fire6" parent="Entities/Fire" unique_id=714136656 instance=ExtResource("5_oek6g")]
+position = Vector2(655, 671)
+
+[node name="Fire7" parent="Entities/Fire" unique_id=1092899826 instance=ExtResource("5_oek6g")]
+position = Vector2(624, 671)
+
+[node name="Fire8" parent="Entities/Fire" unique_id=1639278762 instance=ExtResource("5_oek6g")]
+position = Vector2(623, 645)
+
+[node name="Fire9" parent="Entities/Fire" unique_id=1261456723 instance=ExtResource("5_oek6g")]
+position = Vector2(736, 618)
+
+[node name="Fire10" parent="Entities/Fire" unique_id=575507193 instance=ExtResource("5_oek6g")]
+position = Vector2(767, 618)
+
+[node name="Lava" type="Node" parent="Entities" unique_id=1847545771]
+
+[node name="Lava" parent="Entities/Lava" unique_id=1726874747 instance=ExtResource("7_1wv6l")]
+position = Vector2(56, 712)
+
+[node name="Lava2" parent="Entities/Lava" unique_id=2140395030 instance=ExtResource("7_1wv6l")]
+position = Vector2(72, 712)
+
+[node name="Lava3" parent="Entities/Lava" unique_id=1058822792 instance=ExtResource("7_1wv6l")]
+position = Vector2(88, 712)
+
+[node name="Lava4" parent="Entities/Lava" unique_id=1257909092 instance=ExtResource("7_1wv6l")]
+position = Vector2(104, 712)
+
+[node name="Lava5" parent="Entities/Lava" unique_id=410516135 instance=ExtResource("7_1wv6l")]
+position = Vector2(120, 712)
+
+[node name="Lava6" parent="Entities/Lava" unique_id=1902008964 instance=ExtResource("7_1wv6l")]
+position = Vector2(136, 712)
+
+[node name="Lava7" parent="Entities/Lava" unique_id=1652905863 instance=ExtResource("7_1wv6l")]
+position = Vector2(168, 712)
+
+[node name="Lava8" parent="Entities/Lava" unique_id=531000711 instance=ExtResource("7_1wv6l")]
+position = Vector2(184, 712)
+
+[node name="Lava9" parent="Entities/Lava" unique_id=123497931 instance=ExtResource("7_1wv6l")]
+position = Vector2(200, 712)
+
+[node name="Lava10" parent="Entities/Lava" unique_id=273082448 instance=ExtResource("7_1wv6l")]
+position = Vector2(248, 712)
+
+[node name="Lava11" parent="Entities/Lava" unique_id=12802676 instance=ExtResource("7_1wv6l")]
+position = Vector2(264, 712)
+
+[node name="Lava12" parent="Entities/Lava" unique_id=1468735368 instance=ExtResource("7_1wv6l")]
+position = Vector2(280, 712)
+
+[node name="Lava13" parent="Entities/Lava" unique_id=1382426502 instance=ExtResource("7_1wv6l")]
+position = Vector2(296, 712)
+
+[node name="Lava14" parent="Entities/Lava" unique_id=1376585628 instance=ExtResource("7_1wv6l")]
+position = Vector2(312, 712)
+
+[node name="Lava15" parent="Entities/Lava" unique_id=340665025 instance=ExtResource("7_1wv6l")]
+position = Vector2(328, 712)
+
+[node name="Lava16" parent="Entities/Lava" unique_id=1745063148 instance=ExtResource("7_1wv6l")]
+position = Vector2(344, 712)
+
+[node name="Lava17" parent="Entities/Lava" unique_id=1937248042 instance=ExtResource("7_1wv6l")]
+position = Vector2(616, 712)
+
+[node name="Lava18" parent="Entities/Lava" unique_id=751550593 instance=ExtResource("7_1wv6l")]
+position = Vector2(632, 712)
+
+[node name="Lava19" parent="Entities/Lava" unique_id=476242716 instance=ExtResource("7_1wv6l")]
+position = Vector2(648, 712)
+
+[node name="Lava20" parent="Entities/Lava" unique_id=842298715 instance=ExtResource("7_1wv6l")]
+position = Vector2(664, 712)
+
+[node name="Lava21" parent="Entities/Lava" unique_id=1612312770 instance=ExtResource("7_1wv6l")]
+position = Vector2(680, 712)
+
+[node name="Lava22" parent="Entities/Lava" unique_id=300963650 instance=ExtResource("7_1wv6l")]
+position = Vector2(696, 712)
+
+[node name="Lava23" parent="Entities/Lava" unique_id=1546382828 instance=ExtResource("7_1wv6l")]
+position = Vector2(712, 712)
+
+[node name="Lava24" parent="Entities/Lava" unique_id=431186573 instance=ExtResource("7_1wv6l")]
+position = Vector2(728, 712)
+
+[node name="Lava25" parent="Entities/Lava" unique_id=2019809757 instance=ExtResource("7_1wv6l")]
+position = Vector2(744, 712)
+
+[node name="Lava26" parent="Entities/Lava" unique_id=1379728686 instance=ExtResource("7_1wv6l")]
+position = Vector2(760, 712)
+
+[node name="Lava27" parent="Entities/Lava" unique_id=2119640434 instance=ExtResource("7_1wv6l")]
+position = Vector2(776, 712)
+
+[node name="Gun" parent="Entities" unique_id=1994237845 instance=ExtResource("8_70imb")]
+position = Vector2(155, 630)
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=2040751010]
+
+[node name="PlayerSpawn" type="Marker2D" parent="SpawnPoints" unique_id=1890973985]
+position = Vector2(30, 690)

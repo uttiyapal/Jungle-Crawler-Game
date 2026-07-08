@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dqml1hw3vvld0"]
+
+[ext_resource type="Script" uid="uid://dj17exsudiswv" path="res://scripts/objects/exit_door.gd" id="1_alsv6"]
+[ext_resource type="Texture2D" uid="uid://c5xiqq0s0ykvg" path="res://assets/graphics/objects/door.png" id="1_grocx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_alsv6"]
+size = Vector2(14, 14)
+
+[node name="ExitDoor" type="Area2D" unique_id=1589347372]
+script = ExtResource("1_alsv6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=429510119]
+scale = Vector2(0.6666667, 0.5833333)
+texture = ExtResource("1_grocx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1135557559]
+shape = SubResource("RectangleShape2D_alsv6")
