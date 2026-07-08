@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cee6q8y7jovq1"]
 
-[ext_resource type="Texture2D" uid="uid://cjar7xpgef2rb" path="res://assets/graphics/backgrounds/background_brickwall.jpg" id="1_g0jr5"]
+[ext_resource type="Texture2D" uid="uid://c16nvm0ra8s78" path="res://assets/graphics/backgrounds/black-background.jpg" id="1_qwlqn"]
 [ext_resource type="Texture2D" uid="uid://d1fyhxnrher1o" path="res://assets/tiles/Blocks (16 x 16).png" id="2_i4uh8"]
 [ext_resource type="PackedScene" uid="uid://dqml1hw3vvld0" path="res://scenes/objects/ExitDoor.tscn" id="3_g0jr5"]
 [ext_resource type="PackedScene" uid="uid://dkyfhbwo75en5" path="res://scenes/collectibles/Gem.tscn" id="4_i4uh8"]
@@ -35,7 +35,7 @@ metadata/_edit_horizontal_guides_ = [529.0]
 [node name="Background" type="Sprite2D" parent="." unique_id=74425266]
 position = Vector2(159.75, 639.5)
 scale = Vector2(0.1658854, 0.13802078)
-texture = ExtResource("1_g0jr5")
+texture = ExtResource("1_qwlqn")
 
 [node name="World" type="Node2D" parent="." unique_id=684069849]
 

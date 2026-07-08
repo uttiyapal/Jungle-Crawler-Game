@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://ihst7axk28ma"]
 
-[ext_resource type="Texture2D" uid="uid://cjar7xpgef2rb" path="res://assets/graphics/backgrounds/background_brickwall.jpg" id="1_g0jr5"]
+[ext_resource type="Texture2D" uid="uid://c16nvm0ra8s78" path="res://assets/graphics/backgrounds/black-background.jpg" id="1_70imb"]
 [ext_resource type="Texture2D" uid="uid://d1fyhxnrher1o" path="res://assets/tiles/Blocks (16 x 16).png" id="2_i4uh8"]
 [ext_resource type="PackedScene" uid="uid://dqml1hw3vvld0" path="res://scenes/objects/ExitDoor.tscn" id="3_g0jr5"]
 [ext_resource type="PackedScene" uid="uid://obghft67cg0g" path="res://scenes/collectibles/Key.tscn" id="4_4m5u4"]
@@ -37,9 +37,9 @@ sources/0 = SubResource("TileSetAtlasSource_msin7")
 metadata/_edit_horizontal_guides_ = [529.0]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=74425266]
-position = Vector2(392.50003, 519)
-scale = Vector2(0.4088542, 0.3489583)
-texture = ExtResource("1_g0jr5")
+position = Vector2(397, 610)
+scale = Vector2(0.166, 0.138)
+texture = ExtResource("1_70imb")
 
 [node name="World" type="Node2D" parent="." unique_id=684069849]
 
