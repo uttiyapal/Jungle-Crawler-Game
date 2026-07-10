@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://dnpbm2xutot2r"]
+
+[ext_resource type="Script" uid="uid://bv1ukc3824uy3" path="res://scripts/effects/explosion.gd" id="1_8y2n5"]
+[ext_resource type="Texture2D" uid="uid://de1xpkw0ompbg" path="res://assets/graphics/objects/Yellow Effect Bullet Impact Explosion 32x32.png" id="1_urivy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8y2n5"]
+atlas = ExtResource("1_urivy")
+region = Rect2(512, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwe4o"]
+atlas = ExtResource("1_urivy")
+region = Rect2(544, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qhvj"]
+atlas = ExtResource("1_urivy")
+region = Rect2(576, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp1ll"]
+atlas = ExtResource("1_urivy")
+region = Rect2(608, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvnoi"]
+atlas = ExtResource("1_urivy")
+region = Rect2(256, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knwlc"]
+atlas = ExtResource("1_urivy")
+region = Rect2(288, 192, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_spy43"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8y2n5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwe4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qhvj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp1ll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvnoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knwlc")
+}],
+"loop": false,
+"name": &"Explode",
+"speed": 15.0
+}]
+
+[node name="Explosion" type="Node2D" unique_id=63443863]
+script = ExtResource("1_8y2n5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1963244391]
+sprite_frames = SubResource("SpriteFrames_spy43")
+animation = &"Explode"
+frame = 5
+frame_progress = 1.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=339032067]

@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed := 80.0
 
 @export var bullet_scene : PackedScene
+@export var explosion_scene : PackedScene
 
 @onready var bullet_spawn = $BulletSpawn
 @onready var shoot_timer = $ShootTimer
@@ -61,6 +62,9 @@ func take_damage(amount: int):
 
 func die():
 
+	var explosion = explosion_scene.instantiate()
+	get_parent().add_child(explosion)
+	explosion.global_position = global_position
 	GameManager.add_score(100)
 	queue_free()
 

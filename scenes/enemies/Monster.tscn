@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://je8gbsupmpop" path="res://assets/graphics/enemies/Spider_16x16.png" id="1_huvl7"]
 [ext_resource type="Script" uid="uid://bqk08djayaeii" path="res://scripts/enemies/monster.gd" id="1_x7oef"]
 [ext_resource type="PackedScene" uid="uid://djvkex2urdhoj" path="res://scenes/bullets/EnemyBullet.tscn" id="2_vk31u"]
+[ext_resource type="PackedScene" uid="uid://dnpbm2xutot2r" path="res://scenes/effects/Explosion.tscn" id="3_v3je3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vk31u"]
 radius = 8.0
@@ -51,6 +52,7 @@ collision_layer = 2
 collision_mask = 32
 script = ExtResource("1_x7oef")
 bullet_scene = ExtResource("2_vk31u")
+explosion_scene = ExtResource("3_v3je3")
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=78733379]
 
