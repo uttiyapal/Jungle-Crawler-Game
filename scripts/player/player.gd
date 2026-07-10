@@ -12,6 +12,7 @@ var facing_right := true
 @export var bullet_scene: PackedScene
 @onready var sprite = $AnimatedSprite2D
 @onready var bullet_spawn = $BulletSpawn
+@onready var camera = $Camera2D
 
 var active_bullet: Node = null
 
@@ -133,3 +134,9 @@ func _on_animated_sprite_2d_animation_finished():
 
 	if sprite.animation == "Shoot":
 		is_shooting = false
+
+func set_camera_limits(top_left: Vector2, bottom_right: Vector2):
+	camera.limit_left = int(top_left.x)
+	camera.limit_top = int(top_left.y)
+	camera.limit_right = int(bottom_right.x)
+	camera.limit_bottom = int(bottom_right.y)

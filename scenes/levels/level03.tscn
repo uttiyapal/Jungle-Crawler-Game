@@ -185,4 +185,12 @@ position = Vector2(420, 619)
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=497194717]
 
 [node name="PlayerSpawn" type="Marker2D" parent="SpawnPoints" unique_id=1799908622]
-position = Vector2(33, 641)
+position = Vector2(29, 643)
+
+[node name="CameraLimits" type="Node2D" parent="." unique_id=1712765749]
+
+[node name="TopLeft" type="Marker2D" parent="CameraLimits" unique_id=1589727224]
+position = Vector2(1, 561)
+
+[node name="BottomRight" type="Marker2D" parent="CameraLimits" unique_id=169112409]
+position = Vector2(1167, 719)

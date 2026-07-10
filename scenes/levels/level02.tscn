@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://dkyfhbwo75en5" path="res://scenes/collectibles/Gem.tscn" id="4_cudmn"]
 [ext_resource type="PackedScene" uid="uid://dm4s114l8bdw7" path="res://scenes/hazards/Fire.tscn" id="5_oek6g"]
 [ext_resource type="PackedScene" uid="uid://b0yd6mr2ummhe" path="res://scenes/hazards/Lava.tscn" id="7_1wv6l"]
-[ext_resource type="PackedScene" uid="uid://cjajv6wu4ai4f" path="res://scenes/collectibles/Gun.tscn" id="8_70imb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_msin7"]
 texture = ExtResource("2_i4uh8")
@@ -35,6 +34,14 @@ sources/0 = SubResource("TileSetAtlasSource_msin7")
 
 [node name="Level02" type="Node2D" unique_id=602118488]
 metadata/_edit_horizontal_guides_ = [529.0]
+
+[node name="CameraLimits" type="Node2D" parent="." unique_id=65082762]
+
+[node name="TopLeft" type="Marker2D" parent="CameraLimits" unique_id=1316132300]
+position = Vector2(1, 561)
+
+[node name="BottomRight" type="Marker2D" parent="CameraLimits" unique_id=1565231892]
+position = Vector2(783, 719)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=74425266]
 position = Vector2(397, 610)
@@ -210,9 +217,6 @@ position = Vector2(760, 712)
 
 [node name="Lava27" parent="Entities/Lava" unique_id=2119640434 instance=ExtResource("7_1wv6l")]
 position = Vector2(776, 712)
-
-[node name="Gun" parent="Entities" unique_id=1994237845 instance=ExtResource("8_70imb")]
-position = Vector2(155, 630)
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=2040751010]
 

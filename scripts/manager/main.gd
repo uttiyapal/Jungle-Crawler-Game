@@ -37,6 +37,15 @@ func load_level(scene_path: String):
 	
 	var spawn = current_level_instance.get_node("SpawnPoints/PlayerSpawn")
 	player.global_position = spawn.global_position
+	
+	var limits = current_level_instance.get_node("CameraLimits")
+	var top_left = limits.get_node("TopLeft")
+	var bottom_right = limits.get_node("BottomRight")
+
+	player.set_camera_limits(
+		top_left.global_position,
+		bottom_right.global_position
+	)
 
 func _on_level_completed() -> void:
 	current_level_index += 1

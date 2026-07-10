@@ -32,8 +32,16 @@ sources/0 = SubResource("TileSetAtlasSource_msin7")
 [node name="Level01" type="Node2D" unique_id=602118488]
 metadata/_edit_horizontal_guides_ = [529.0]
 
+[node name="CameraLimits" type="Node2D" parent="." unique_id=1176040036]
+
+[node name="TopLeft" type="Marker2D" parent="CameraLimits" unique_id=20155929]
+position = Vector2(1, 561)
+
+[node name="BottomRight" type="Marker2D" parent="CameraLimits" unique_id=889576787]
+position = Vector2(319, 719)
+
 [node name="Background" type="Sprite2D" parent="." unique_id=74425266]
-position = Vector2(159.75, 639.5)
+position = Vector2(149, 648.99994)
 scale = Vector2(0.1658854, 0.13802078)
 texture = ExtResource("1_qwlqn")
 
