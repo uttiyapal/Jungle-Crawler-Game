@@ -4,6 +4,7 @@ signal player_died
 
 const JETPACK_SPEED := 120.0
 var is_shooting := false
+var is_hurt := false
 var bullet_spawn_offset := 10.0
 const SPEED := 100.0
 const JUMP_FORCE := -250.0
@@ -167,6 +168,9 @@ func _on_bullet_destroyed():
 
 func update_animation():
 
+	if is_hurt:
+		return
+	
 	if is_shooting:
 		return
 
@@ -193,8 +197,19 @@ func _on_animated_sprite_2d_animation_finished():
 	if sprite.animation == "Shoot":
 		is_shooting = false
 
+	elif sprite.animation == "Hurt":
+		is_hurt = false
+
 func set_camera_limits(top_left: Vector2, bottom_right: Vector2):
 	camera.limit_left = int(top_left.x)
 	camera.limit_top = int(top_left.y)
 	camera.limit_right = int(bottom_right.x)
 	camera.limit_bottom = int(bottom_right.y)
+
+func play_hurt():
+
+	if is_hurt:
+		return
+
+	is_hurt = true
+	sprite.play("Hurt")

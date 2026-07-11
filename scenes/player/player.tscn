@@ -8,6 +8,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
 size = Vector2(10, 14)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ydkj"]
+atlas = ExtResource("3_gmlin")
+region = Rect2(64, 880, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3j4b4"]
+atlas = ExtResource("3_gmlin")
+region = Rect2(16, 880, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_gmlin"]
 atlas = ExtResource("3_gmlin")
 region = Rect2(16, 16, 16, 16)
@@ -78,6 +86,20 @@ region = Rect2(256, 112, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gmlin"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ydkj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3j4b4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ydkj")
+}],
+"loop": false,
+"name": &"Hurt",
+"speed": 8.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gmlin")
@@ -168,8 +190,9 @@ shape = SubResource("RectangleShape2D_dovo2")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=25982794]
 scale = Vector2(0.84, 1)
 sprite_frames = SubResource("SpriteFrames_gmlin")
-animation = &"Jetpack"
-frame_progress = 0.8643594
+animation = &"Hurt"
+frame = 2
+frame_progress = 1.0
 
 [node name="BulletSpawn" type="Marker2D" parent="." unique_id=2093894540]
 position = Vector2(5, 0)

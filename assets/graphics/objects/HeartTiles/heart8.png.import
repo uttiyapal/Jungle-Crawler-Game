@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctppu8786x00a"
-path="res://.godot/imported/red_balloon.png-4e1967186839f77011709a747301e57b.ctex"
+uid="uid://crm64tvvmb5jp"
+path="res://.godot/imported/heart8.png-d826f3a8e617626631539150c6c73fc6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/objects/red_balloon.png"
-dest_files=["res://.godot/imported/red_balloon.png-4e1967186839f77011709a747301e57b.ctex"]
+source_file="res://assets/graphics/objects/HeartTiles/heart8.png"
+dest_files=["res://.godot/imported/heart8.png-d826f3a8e617626631539150c6c73fc6.ctex"]
 
 [params]
 

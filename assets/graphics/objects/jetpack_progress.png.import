@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1ja30barj1dr"
-path="res://.godot/imported/yellow_balloon.png-ca199f6640ab5de3a267ee476d30f50b.ctex"
+uid="uid://0ofgspghdjcj"
+path="res://.godot/imported/jetpack_progress.png-332dc7e4474a30462b289c3006d569f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/objects/yellow_balloon.png"
-dest_files=["res://.godot/imported/yellow_balloon.png-ca199f6640ab5de3a267ee476d30f50b.ctex"]
+source_file="res://assets/graphics/objects/jetpack_progress.png"
+dest_files=["res://.godot/imported/jetpack_progress.png-332dc7e4474a30462b289c3006d569f5.ctex"]
 
 [params]
 

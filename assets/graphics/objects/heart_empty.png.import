@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3gkmnc7mfrrb"
-path="res://.godot/imported/Fire1.png-35c58d4143837e9aec7997447c0572fb.ctex"
+uid="uid://qmv1ho2nubh8"
+path="res://.godot/imported/heart_empty.png-b0fa249f37325bcb31034c9d9935e79c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/objects/Fire1.png"
-dest_files=["res://.godot/imported/Fire1.png-35c58d4143837e9aec7997447c0572fb.ctex"]
+source_file="res://assets/graphics/objects/heart_empty.png"
+dest_files=["res://.godot/imported/heart_empty.png-b0fa249f37325bcb31034c9d9935e79c.ctex"]
 
 [params]
 

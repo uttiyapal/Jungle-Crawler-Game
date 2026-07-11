@@ -3,6 +3,19 @@
 [ext_resource type="Script" uid="uid://bllqw3oc7ywvc" path="res://scripts/manager/main.gd" id="1_llaio"]
 [ext_resource type="PackedScene" uid="uid://bqaxdcj1xuv27" path="res://scenes/player/player.tscn" id="2_oekm8"]
 [ext_resource type="Script" uid="uid://dvet8woq3c65b" path="res://scripts/game/hud.gd" id="3_yd8kv"]
+[ext_resource type="Texture2D" uid="uid://dex5p0rna5gxa" path="res://assets/graphics/characters/dave_sprite.png" id="4_5v64u"]
+[ext_resource type="Texture2D" uid="uid://deye3o67gaddx" path="res://assets/graphics/objects/key.png" id="4_j7lav"]
+[ext_resource type="Texture2D" uid="uid://biwg40qw7iwv4" path="res://assets/graphics/objects/heart_full.png" id="4_uaf1y"]
+[ext_resource type="Texture2D" uid="uid://0ofgspghdjcj" path="res://assets/graphics/objects/jetpack_progress.png" id="5_iba00"]
+[ext_resource type="Texture2D" uid="uid://qws5c41ux2dt" path="res://assets/graphics/objects/gun_sprite.png" id="6_g38uy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8aysu"]
+bg_color = Color(0, 0, 0, 0.5882353)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
 
 [node name="Main" type="Node" unique_id=402348827]
 script = ExtResource("1_llaio")
@@ -26,51 +39,99 @@ grow_vertical = 2
 [node name="Panel" type="Panel" parent="HUD/TopBar" unique_id=603982085]
 layout_mode = 0
 offset_right = 1280.0
-offset_bottom = 50.0
+offset_bottom = 70.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8aysu")
 
 [node name="ScoreLabel" type="Label" parent="HUD/TopBar" unique_id=1176870634]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 60.0
-offset_bottom = 43.0
+offset_left = 40.0
+offset_top = 30.0
+offset_right = 160.0
+offset_bottom = 53.0
 text = "SCORE: 000000"
 
-[node name="LivesLabel" type="Label" parent="HUD/TopBar" unique_id=2097898295]
+[node name="LivesContainer" type="HBoxContainer" parent="HUD/TopBar" unique_id=347905148]
 layout_mode = 0
-offset_left = 220.0
-offset_top = 20.0
-offset_right = 279.0
-offset_bottom = 43.0
-text = "LIVES: 3"
+offset_left = 200.0
+offset_top = 5.0
+offset_right = 352.0
+offset_bottom = 53.0
+scale = Vector2(1.5, 1.5)
 
-[node name="KeyLabel" type="Label" parent="HUD/TopBar" unique_id=1091404570]
-layout_mode = 0
-offset_left = 420.0
-offset_top = 20.0
-offset_right = 483.0
-offset_bottom = 43.0
-text = "KEY: NO"
+[node name="Life1" type="TextureRect" parent="HUD/TopBar/LivesContainer" unique_id=430760037]
+layout_mode = 2
+texture = ExtResource("4_5v64u")
+expand_mode = 3
+stretch_mode = 5
 
-[node name="HealthLabel" type="Label" parent="HUD/TopBar" unique_id=794728690]
-layout_mode = 0
-offset_left = 620.0
-offset_top = 20.0
-offset_right = 660.0
-offset_bottom = 43.0
+[node name="Life2" type="TextureRect" parent="HUD/TopBar/LivesContainer" unique_id=242139007]
+layout_mode = 2
+texture = ExtResource("4_5v64u")
+expand_mode = 3
+stretch_mode = 5
 
-[node name="GunLabel" type="Label" parent="HUD/TopBar" unique_id=623444064]
-layout_mode = 0
-offset_left = 820.0
-offset_top = 20.0
-offset_right = 860.0
-offset_bottom = 43.0
+[node name="Life3" type="TextureRect" parent="HUD/TopBar/LivesContainer" unique_id=1284224820]
+layout_mode = 2
+texture = ExtResource("4_5v64u")
+expand_mode = 3
+stretch_mode = 5
 
-[node name="JetpackLabel" type="Label" parent="HUD/TopBar" unique_id=849360343]
+[node name="HealthContainer" type="HBoxContainer" parent="HUD/TopBar" unique_id=393452880]
 layout_mode = 0
-offset_left = 1020.0
+offset_left = 500.0
 offset_top = 20.0
-offset_right = 1060.0
-offset_bottom = 43.0
+offset_right = 568.0
+offset_bottom = 40.0
+scale = Vector2(2, 2)
+
+[node name="Heart1" type="TextureRect" parent="HUD/TopBar/HealthContainer" unique_id=872069254]
+layout_mode = 2
+texture = ExtResource("4_uaf1y")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Heart2" type="TextureRect" parent="HUD/TopBar/HealthContainer" unique_id=165961203]
+layout_mode = 2
+texture = ExtResource("4_uaf1y")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Heart3" type="TextureRect" parent="HUD/TopBar/HealthContainer" unique_id=1494570032]
+layout_mode = 2
+texture = ExtResource("4_uaf1y")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="KeyIcon" type="TextureRect" parent="HUD/TopBar" unique_id=614891611]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 20.0
+offset_right = 740.0
+offset_bottom = 40.0
+scale = Vector2(2, 2)
+texture = ExtResource("4_j7lav")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="GunIcon" type="TextureRect" parent="HUD/TopBar" unique_id=1495919799]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 20.0
+offset_right = 940.0
+offset_bottom = 40.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_g38uy")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="JetpackBar" type="TextureProgressBar" parent="HUD/TopBar" unique_id=1813876016]
+layout_mode = 0
+offset_left = 1050.0
+offset_top = 20.0
+offset_right = 1315.0
+offset_bottom = 67.0
+scale = Vector2(0.65, 0.65)
+value = 100.0
+texture_progress = ExtResource("5_iba00")
 
 [node name="PauseMenu" type="Node" parent="." unique_id=1207636030]

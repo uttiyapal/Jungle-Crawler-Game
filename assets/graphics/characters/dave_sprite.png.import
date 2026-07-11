@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gemv2kq1gqya"
-path="res://.godot/imported/Fire2.png-9387b4b6b555c391df04c863f1517cd1.ctex"
+uid="uid://dex5p0rna5gxa"
+path="res://.godot/imported/dave_sprite.png-bb035b0f3e7b9775d7a4561a4f4d4db5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/objects/Fire2.png"
-dest_files=["res://.godot/imported/Fire2.png-9387b4b6b555c391df04c863f1517cd1.ctex"]
+source_file="res://assets/graphics/characters/dave_sprite.png"
+dest_files=["res://.godot/imported/dave_sprite.png-bb035b0f3e7b9775d7a4561a4f4d4db5.ctex"]
 
 [params]
 
