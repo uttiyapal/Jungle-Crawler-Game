@@ -44,6 +44,7 @@ sources/0 = SubResource("TileSetAtlasSource_qulja")
 [node name="Level03" type="Node2D" unique_id=308517454]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=240271843]
+position = Vector2(76, 1)
 texture = ExtResource("1_tk052")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1121198518]
@@ -61,51 +62,6 @@ position = Vector2(1096, 584)
 position = Vector2(1080, 695)
 
 [node name="Fire" type="Node" parent="Entities" unique_id=1402248984]
-
-[node name="Fire" parent="Entities/Fire" unique_id=317862174 instance=ExtResource("4_u70xn")]
-position = Vector2(87, 648)
-
-[node name="Fire2" parent="Entities/Fire" unique_id=630125707 instance=ExtResource("4_u70xn")]
-position = Vector2(152, 648)
-
-[node name="Fire3" parent="Entities/Fire" unique_id=900673171 instance=ExtResource("4_u70xn")]
-position = Vector2(217, 648)
-
-[node name="Fire4" parent="Entities/Fire" unique_id=1528346587 instance=ExtResource("4_u70xn")]
-position = Vector2(231, 648)
-
-[node name="Fire5" parent="Entities/Fire" unique_id=1936160305 instance=ExtResource("4_u70xn")]
-position = Vector2(312, 648)
-
-[node name="Fire6" parent="Entities/Fire" unique_id=865572618 instance=ExtResource("4_u70xn")]
-position = Vector2(376, 648)
-
-[node name="Fire7" parent="Entities/Fire" unique_id=1843314939 instance=ExtResource("4_u70xn")]
-position = Vector2(439, 648)
-
-[node name="Fire8" parent="Entities/Fire" unique_id=1138671826 instance=ExtResource("4_u70xn")]
-position = Vector2(504, 648)
-
-[node name="Fire9" parent="Entities/Fire" unique_id=1146596328 instance=ExtResource("4_u70xn")]
-position = Vector2(569, 648)
-
-[node name="Fire10" parent="Entities/Fire" unique_id=1809617845 instance=ExtResource("4_u70xn")]
-position = Vector2(583, 648)
-
-[node name="Fire11" parent="Entities/Fire" unique_id=661667321 instance=ExtResource("4_u70xn")]
-position = Vector2(647, 648)
-
-[node name="Fire12" parent="Entities/Fire" unique_id=2011003508 instance=ExtResource("4_u70xn")]
-position = Vector2(712, 648)
-
-[node name="Fire13" parent="Entities/Fire" unique_id=1594240880 instance=ExtResource("4_u70xn")]
-position = Vector2(760, 648)
-
-[node name="Fire14" parent="Entities/Fire" unique_id=1160134704 instance=ExtResource("4_u70xn")]
-position = Vector2(842, 648)
-
-[node name="Fire15" parent="Entities/Fire" unique_id=856510917 instance=ExtResource("4_u70xn")]
-position = Vector2(854, 648)
 
 [node name="Fire16" parent="Entities/Fire" unique_id=1353884241 instance=ExtResource("4_u70xn")]
 position = Vector2(1000, 663)

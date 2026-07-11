@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://qws5c41ux2dt" path="res://assets/graphics/objects/gun_sprite.png" id="6_g38uy"]
 [ext_resource type="AudioStream" uid="uid://bn7ve4qgo6pjo" path="res://assets/audio/pickup.ogg" id="9_8aysu"]
 [ext_resource type="AudioStream" uid="uid://c62xdbk28yuys" path="res://assets/audio/bgm.ogg" id="10_mkoeh"]
+[ext_resource type="PackedScene" uid="uid://bixey8fn4mwdy" path="res://scenes/menus/GameComplete.tscn" id="12_mogw1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8aysu"]
 bg_color = Color(0, 0, 0, 0.5882353)
@@ -23,6 +24,8 @@ border_color = Color(1, 1, 1, 1)
 [node name="Main" type="Node" unique_id=402348827]
 process_mode = 3
 script = ExtResource("1_llaio")
+
+[node name="GameComplete" parent="." unique_id=271948499 instance=ExtResource("12_mogw1")]
 
 [node name="CurrentLevel" type="Node2D" parent="." unique_id=1743230787]
 position = Vector2(0, -1)

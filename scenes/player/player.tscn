@@ -191,7 +191,7 @@ shape = SubResource("RectangleShape2D_dovo2")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=25982794]
 scale = Vector2(0.84, 1)
 sprite_frames = SubResource("SpriteFrames_gmlin")
-animation = &"Idle"
+animation = &"Hurt"
 
 [node name="BulletSpawn" type="Marker2D" parent="." unique_id=2093894540]
 position = Vector2(5, 0)

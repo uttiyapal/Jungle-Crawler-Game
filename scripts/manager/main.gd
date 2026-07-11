@@ -3,7 +3,9 @@ extends Node
 @onready var background_music = $BackgroundMusic
 @onready var current_level = $CurrentLevel
 @onready var player = $Player
+@onready var hud = $HUD
 @onready var pickup_sound = $PickupSound
+@onready var game_complete = $GameComplete
 
 var current_level_instance : Node = null
 
@@ -56,7 +58,13 @@ func _on_level_completed() -> void:
 	if current_level_index < levels.size():
 		call_deferred("load_level", levels[current_level_index])
 	else:
-		print("Game Complete!")
+		
+		current_level_instance.queue_free()
+		player.hide()
+		hud.hide()
+		background_music.stop()
+		game_complete.show()
+		game_complete.set_score(GameManager.score)
 
 func _on_player_died():
 
