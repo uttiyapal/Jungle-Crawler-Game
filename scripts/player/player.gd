@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 signal player_died
+signal game_over
 
 const JETPACK_SPEED := 120.0
 var is_shooting := false
@@ -130,7 +131,7 @@ func die():
 
 		GameManager.lives = 0
 
-		print("GAME OVER")
+		game_over.emit()
 
 		return
 

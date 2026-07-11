@@ -6,6 +6,7 @@ extends Node
 @onready var hud = $HUD
 @onready var pickup_sound = $PickupSound
 @onready var game_complete = $GameComplete
+@onready var game_over = $GameOver
 
 var current_level_instance : Node = null
 
@@ -20,6 +21,7 @@ var current_level_index = 0
 func _ready():
 	background_music.play()
 	player.player_died.connect(_on_player_died)
+	player.game_over.connect(_on_game_over)
 	load_level(levels[current_level_index])
 
 func load_level(scene_path: String):
@@ -76,3 +78,11 @@ func _on_player_died():
 
 func play_pickup_sound():
 	pickup_sound.play()
+
+func _on_game_over():
+	current_level_instance.queue_free()
+	player.hide()
+	hud.hide()
+	background_music.stop()
+	game_over.show()
+	game_over.set_score(GameManager.score)

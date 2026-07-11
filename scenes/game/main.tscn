@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bllqw3oc7ywvc" path="res://scripts/manager/main.gd" id="1_llaio"]
 [ext_resource type="PackedScene" uid="uid://bqaxdcj1xuv27" path="res://scenes/player/player.tscn" id="2_oekm8"]
+[ext_resource type="PackedScene" uid="uid://d1xuumsrcpu27" path="res://scenes/menus/GameOver.tscn" id="3_4c6dq"]
 [ext_resource type="Script" uid="uid://dvet8woq3c65b" path="res://scripts/game/hud.gd" id="3_yd8kv"]
 [ext_resource type="Texture2D" uid="uid://deye3o67gaddx" path="res://assets/graphics/objects/key.png" id="4_j7lav"]
 [ext_resource type="Texture2D" uid="uid://biwg40qw7iwv4" path="res://assets/graphics/objects/heart_full.png" id="4_uaf1y"]
@@ -26,6 +27,8 @@ process_mode = 3
 script = ExtResource("1_llaio")
 
 [node name="GameComplete" parent="." unique_id=271948499 instance=ExtResource("12_mogw1")]
+
+[node name="GameOver" parent="." unique_id=1017326797 instance=ExtResource("3_4c6dq")]
 
 [node name="CurrentLevel" type="Node2D" parent="." unique_id=1743230787]
 position = Vector2(0, -1)
