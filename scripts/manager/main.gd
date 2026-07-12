@@ -7,6 +7,7 @@ extends Node
 @onready var pickup_sound = $PickupSound
 @onready var game_complete = $GameComplete
 @onready var game_over = $GameOver
+@onready var pause_menu = $PauseMenu
 
 var current_level_instance : Node = null
 
@@ -17,6 +18,8 @@ var levels = [
 ]
 
 var current_level_index = 0
+
+
 
 func _ready():
 	background_music.play()
