@@ -4,7 +4,7 @@
   <img src="img/banner.png" width="65%">
 </p>
 
-A dungeon crawler game paying homage to the MS-DOS games (VGA Graphics) of the 90s , made on the Godot Engine using GDScript as an educational project. Players must navigate hazardous levels, collect valuable items, defeat enemies, and reach the exit while managing health, lives, and equipment.
+A platformer game paying homage to the MS-DOS games of the 90s , made on the Godot Engine using GDScript as an educational project. Players must navigate hazardous levels, collect valuable items, defeat enemies, and reach the exit while managing health, lives, and equipment.
 
 ---
 
