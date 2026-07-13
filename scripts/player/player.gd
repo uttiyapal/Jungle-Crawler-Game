@@ -149,30 +149,29 @@ func _do_death():
 		return
 
 	player_died.emit()
-	
-	
 
 func respawn(spawn_position: Vector2):
 
 	global_position = spawn_position
 	velocity = Vector2.ZERO
+	is_hurt = false
+	is_shooting = false
 
 func shoot():
-
 	if !GameManager.has_gun:
 		return
 
 	if active_bullet:
 		return
-	
+
 	is_shooting = true
+	is_hurt = false   # shooting cancels any stale hurt state
+
 	sprite.play("Shoot")
 	shoot_sound.play()
-	
+
 	active_bullet = bullet_scene.instantiate()
-
 	get_parent().add_child(active_bullet)
-
 	active_bullet.global_position = bullet_spawn.global_position
 
 	if facing_right:
@@ -226,10 +225,7 @@ func set_camera_limits(top_left: Vector2, bottom_right: Vector2):
 	camera.limit_bottom = int(bottom_right.y)
 
 func play_hurt():
-
-	if is_hurt:
-		return
-
+	is_shooting = false   # getting hurt cancels any stale shoot state
 	is_hurt = true
 	sprite.play("Hurt")
 

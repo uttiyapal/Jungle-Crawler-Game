@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bk6hsifbvsy4j"]
+
+[ext_resource type="Texture2D" uid="uid://bol6gmimcgqwh" path="res://assets/graphics/objects/sign.png" id="1_p8an6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l5xoj"]
+size = Vector2(14, 14)
+
+[node name="SignBoard" type="Area2D" unique_id=1567757057]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=79062748]
+texture = ExtResource("1_p8an6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1858393164]
+shape = SubResource("RectangleShape2D_l5xoj")
