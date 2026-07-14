@@ -1,10 +1,10 @@
-# Dungeon-Crawler-Game
+# Jungle Crawler
 
 <p align="center">
   <img src="img/banner.png" width="65%">
 </p>
 
-A platformer game paying homage to the MS-DOS games of the 90s , made on the Godot Engine using GDScript as an educational project. Players must navigate hazardous levels, collect valuable items, defeat enemies, and reach the exit while managing health, lives, and equipment.
+A 2D platformer game paying homage to the MS-DOS games of the 90s , made on the Godot Engine using GDScript as an educational project. Players must navigate hazardous levels, collect valuable items, defeat enemies, and reach the exit while managing health, lives, and equipment.
 
 ---
 
@@ -87,6 +87,6 @@ https://github.com/uttiyapal/Dungeon-Crawler-Game.git
 
 3. Press **F5** to run.
 
-4. Alternatively you can play it [here]()  
+4. Alternatively you can play it online [here]()  
 
 ---
