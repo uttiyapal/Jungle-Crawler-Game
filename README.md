@@ -10,7 +10,7 @@ A 2D platformer game paying homage to the MS-DOS games of the 90s , made on the 
 
 ## 🎮 Features
 
-- Ten handcrafted platforming levels
+- Five handcrafted platforming levels
 - Shooting mechanics with bidirectional bullets
 - Collectible gun, gems and key system
 - Jetpack with limited fuel
@@ -62,7 +62,7 @@ A 2D platformer game paying homage to the MS-DOS games of the 90s , made on the 
 
 ## 🎯 Gameplay
 
-Explore ten increasingly challenging levels while avoiding environmental hazards and hostile enemies.
+Explore five increasingly challenging levels while avoiding environmental hazards and hostile enemies.
 
 Collect useful items along the way:
 
