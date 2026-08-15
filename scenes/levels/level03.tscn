@@ -23770,6 +23770,7 @@ sources/12 = SubResource("TileSetAtlasSource_c03um")
 sources/13 = SubResource("TileSetAtlasSource_ssj88")
 
 [node name="Level03" type="Node2D" unique_id=308517454]
+metadata/_edit_lock_ = true
 
 [node name="ParallaxSky" type="Parallax2D" parent="." unique_id=620550835]
 scroll_scale = Vector2(0.2, 0.2)
@@ -23965,8 +23966,16 @@ position = Vector2(1061, 679)
 position = Vector2(1210, 649)
 
 [node name="SignBoard" parent="Entities" unique_id=1567757057 instance=ExtResource("26_os03k")]
-position = Vector2(145, 665)
+position = Vector2(1191, 681)
 message = "Press LMB to shoot Gun"
+
+[node name="SignBoard2" parent="Entities" unique_id=1967894435 instance=ExtResource("26_os03k")]
+position = Vector2(143, 664)
+message = "Stay Vigilant for Monster Bullets"
+
+[node name="SignBoard3" parent="Entities" unique_id=524856541 instance=ExtResource("26_os03k")]
+position = Vector2(72, 457)
+message = "Hearts Replenish Your Health, not Lives"
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=497194717]
 

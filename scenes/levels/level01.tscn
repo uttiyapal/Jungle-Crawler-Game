@@ -14941,6 +14941,7 @@ sources/10 = SubResource("TileSetAtlasSource_gn6l8")
 
 [node name="Level01" type="Node2D" unique_id=602118488]
 metadata/_edit_horizontal_guides_ = [529.0]
+metadata/_edit_lock_ = true
 
 [node name="CameraLimits" type="Node2D" parent="." unique_id=1176040036]
 
@@ -15076,7 +15077,15 @@ position = Vector2(408, 487)
 
 [node name="SignBoard" parent="Entities" unique_id=1567757057 instance=ExtResource("19_6cmih")]
 position = Vector2(77, 681)
-message = "Press Space to Jump"
+message = "Press Space to Jump and Avoid Lavaa "
+
+[node name="SignBoard3" parent="Entities" unique_id=877260617 instance=ExtResource("19_6cmih")]
+position = Vector2(465, 680)
+message = "Collect Gems to Increase Score              "
+
+[node name="SignBoard2" parent="Entities" unique_id=885707754 instance=ExtResource("19_6cmih")]
+position = Vector2(72, 504)
+message = "Pick Up the Key to Unlock the Door"
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=2040751010]
 position = Vector2(2, -17)

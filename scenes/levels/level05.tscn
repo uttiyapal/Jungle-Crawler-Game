@@ -22,13 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://c6ud7eu3o8msn" path="res://assets/tiles/Red-Tree.png" id="14_wpber"]
 [ext_resource type="PackedScene" uid="uid://d1dqqywrqc60l" path="res://scenes/collectibles/Coin.tscn" id="18_lap61"]
 [ext_resource type="PackedScene" uid="uid://b0yd6mr2ummhe" path="res://scenes/hazards/Lava.tscn" id="18_q3aho"]
-[ext_resource type="PackedScene" uid="uid://cdytjf5t1b05t" path="res://scenes/collectibles/Sapphire.tscn" id="19_a2yvy"]
-[ext_resource type="PackedScene" uid="uid://cjklxlr0ncc5c" path="res://scenes/collectibles/Ruby.tscn" id="20_wpber"]
 [ext_resource type="PackedScene" uid="uid://bnbalavu6r75y" path="res://scenes/collectibles/Heart.tscn" id="21_os03k"]
-[ext_resource type="PackedScene" uid="uid://ys2oxsjgvpar" path="res://scenes/collectibles/Emerald.tscn" id="22_whv4a"]
-[ext_resource type="PackedScene" uid="uid://bk6hsifbvsy4j" path="res://scenes/objects/SignBoard.tscn" id="26_os03k"]
 [ext_resource type="PackedScene" uid="uid://dm4s114l8bdw7" path="res://scenes/hazards/Fire.tscn" id="27_yd5dv"]
-[ext_resource type="PackedScene" uid="uid://ckobobwjvxn7k" path="res://scenes/collectibles/Jetpack.tscn" id="28_pkq3u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kaovo"]
 texture = ExtResource("14_wpber")
@@ -23774,7 +23769,8 @@ sources/11 = SubResource("TileSetAtlasSource_whv4a")
 sources/12 = SubResource("TileSetAtlasSource_c03um")
 sources/13 = SubResource("TileSetAtlasSource_ssj88")
 
-[node name="Level03" type="Node2D" unique_id=308517454]
+[node name="Level05" type="Node2D" unique_id=308517454]
+metadata/_edit_lock_ = true
 
 [node name="ParallaxSky" type="Parallax2D" parent="." unique_id=620550835]
 scroll_scale = Vector2(0.2, 0.2)
@@ -23820,66 +23816,497 @@ tile_set = SubResource("TileSet_7rahx")
 [node name="Map" type="Node2D" parent="." unique_id=1121198518]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Map" unique_id=95879475]
-tile_map_data = PackedByteArray("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AAAdABcAAgAHAAkAAAAeABcAAgAHAAkAAAAfABcAAgAHAAkAAAAgABcAAgAHAAkAAAAhABcAAgAHAAkAAAAjABcAAgAHAAkAAAAkABcAAgAHAAkAAAAlABcAAgAHAAkAAAAmABcAAgAHAAkAAAAnABcAAgAHAAkAAAAoABcAAgAHAAkAAAApABcAAgAHAAkAAAAqABcAAgAHAAkAAAArABcAAgAHAAkAAAAsABcAAgAHAAkAAAAtABcAAgAHAAkAAAAuABcAAgAHAAkAAAAvABcAAgAHAAkAAAAwABcAAgAHAAkAAAAxABcAAgAHAAkAAAAyABcAAgAHAAkAAAAzABcAAgAHAAkAAAA0ABcAAgAHAAkAAAA1ABcAAgAHAAkAAAA2ABcAAgAHAAkAAAA3ABcAAgAHAAkAAAA4ABcAAgAHAAkAAAA5ABcAAgAHAAkAAAA6ABcAAgAHAAkAAAA7ABcAAgAHAAkAAAA8ABcAAgAHAAkAAAA9ABcAAgAHAAkAAAA+ABcAAgAHAAkAAAA/ABcAAgAHAAkAAABAABcAAgAHAAkAAABBABcAAgAHAAkAAABCABcAAgAHAAkAAABDABcAAgAHAAkAAABEABcAAgAHAAkAAABFABcAAgAHAAkAAABGABcAAgAHAAkAAABHABcAAgAHAAkAAABIABcAAgAHAAkAAABJABcAAgAHAAkAAABKABcAAgAHAAkAAABLABcAAgAHAAkAAABMABcAAgAHAAkAAABNABcAAgAHAAkAAABOABcAAgAHAAkAAAAiABcAAgAHAAkAAAA=")
+tile_map_data = PackedByteArray("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AAAeABcAAgAHAAkAAAAfABcAAgAHAAkAAAAgABcAAgAHAAkAAAAhABcAAgAHAAkAAAAjABcAAgAHAAkAAAAkABcAAgAHAAkAAAAlABcAAgAHAAkAAAAmABcAAgAHAAkAAAAnABcAAgAHAAkAAAAoABcAAgAHAAkAAAApABcAAgAHAAkAAAAqABcAAgAHAAkAAAArABcAAgAHAAkAAAAsABcAAgAHAAkAAAAtABcAAgAHAAkAAAAuABcAAgAHAAkAAAAvABcAAgAHAAkAAAAwABcAAgAHAAkAAAAxABcAAgAHAAkAAAAyABcAAgAHAAkAAAAzABcAAgAHAAkAAAA0ABcAAgAHAAkAAAA1ABcAAgAHAAkAAAA2ABcAAgAHAAkAAAA3ABcAAgAHAAkAAAA4ABcAAgAHAAkAAAA5ABcAAgAHAAkAAAA6ABcAAgAHAAkAAAA7ABcAAgAHAAkAAAA8ABcAAgAHAAkAAAA9ABcAAgAHAAkAAAA+ABcAAgAHAAkAAAA/ABcAAgAHAAkAAABAABcAAgAHAAkAAABBABcAAgAHAAkAAABCABcAAgAHAAkAAABDABcAAgAHAAkAAABEABcAAgAHAAkAAABFABcAAgAHAAkAAABGABcAAgAHAAkAAABHABcAAgAHAAkAAABIABcAAgAHAAkAAABJABcAAgAHAAkAAABKABcAAgAHAAkAAABLABcAAgAHAAkAAABMABcAAgAHAAkAAABNABcAAgAHAAkAAABOABcAAgAHAAkAAAAiABcAAgAHAAkAAAAEACoAAgAAAAgAAAAEACsAAgAAAAcAAAAFACoAAgABAAgAAAAFACsAAgABAAcAAAADACsAAgACAAcAAAAFACkAAgAAAAcAAAAGACgAAgACAAcAAAAGACoAAgACAAgAAAAGACsAAgACAAcAAAAGACkAAgABAAcAAAAHACgAAgAAAAkAAAAIACgAAgABAAkAAAAKACgAAgAAAAcAAAALACgAAgABAAcAAAAPACgAAgAAAAcAAAAQACgAAgABAAcAAAASACgAAgAAAAcAAAATACgAAgABAAcAAAABACsAAgAAAAIAAAACACsAAgABAAIAAAAUACsAAgAAAAIAAAAVACsAAgABAAIAAAATACsAAgACAAIAAAASACoAAgACAAAAAAAQACoAAgACAAAAAAAOACoAAgACAAAAAAAMACoAAgACAAAAAAAKACoAAgACAAAAAAAIACoAAgACAAAAAAAJACgAAgACAAIAAAAMACgAAgACAAIAAAANACgAAgAAAAIAAAAOACgAAgABAAIAAAARACgAAgACAAIAAAAZACsAAgACAAcAAAAdACsAAgACAAcAAAAXACgAAgACAAcAAAAbACgAAgACAAcAAAAfACgAAgACAAcAAAAiACsAAgAAAAIAAAAjACsAAgABAAIAAAAlACoAAgACAAAAAAAnACoAAgACAAAAAAApACoAAgACAAAAAAArACoAAgACAAAAAAAtACoAAgACAAAAAAAvACsAAgAAAAcAAAAwACsAAgABAAcAAAAyACsAAgAAAAcAAAAzACsAAgABAAcAAAAkACgAAgAAAAcAAAAlACgAAgABAAcAAAAnACgAAgAAAAcAAAAoACgAAgABAAcAAAApACgAAgAAAAcAAAAqACgAAgABAAcAAAArACgAAgAAAAIAAAAsACgAAgABAAIAAAAtACgAAgAAAAIAAAAuACgAAgABAAIAAAAmACgAAgACAAIAAAA1ACkAAgACAAMAAAA3ACcAAgACAAIAAAA5ACUAAgACAAIAAAAtACYAAgAHAAMAAAAtACcAAgAHAAQAAAAuACYAAgAIAAMAAAAuACcAAgAIAAQAAAAtACUAAgAAAAIAAAAuACUAAgABAAIAAAAsACUAAgACAAIAAAAsACYAAgAGAAMAAAAsACcAAgAGAAQAAAA7ACMAAgACAAIAAAA+ACEAAgAAAAIAAAA/ACEAAgABAAIAAABDACEAAgAAAAIAAABEACEAAgABAAIAAABIACEAAgAAAAIAAABJACEAAgABAAIAAABNACEAAgAAAAIAAABOACEAAgABAAIAAABOAB8AAgACAAIAAABMAB0AAgACAAIAAABKABsAAgACAAIAAABNABoAAgAAAAIAAABOABoAAgABAAIAAAA1ACoAAgACAAQAAABFABsAAgAAAAcAAABGABsAAgABAAcAAABBAB0AAgAAAAcAAABCAB0AAgABAAcAAAA8AB0AAgAAAAcAAAA9AB0AAgABAAcAAAA4AB8AAgAAAAcAAAA5AB8AAgABAAcAAAA2AB4AAgACAAIAAAA0ABwAAgACAAIAAAA2ABoAAgACAAIAAAAyABoAAgACAAIAAAAyAB4AAgACAAIAAAAuAB4AAgACAAIAAAAuABoAAgACAAIAAAAsABwAAgACAAIAAAAqABoAAgACAAIAAAAqAB4AAgACAAIAAAAmABoAAgACAAIAAAAmAB4AAgACAAIAAAAkABwAAgACAAIAAAAiABoAAgACAAIAAAAiAB4AAgACAAIAAAAeABoAAgACAAIAAAAeAB4AAgACAAIAAAAcABwAAgACAAIAAAAaABoAAgACAAIAAAAaAB4AAgACAAIAAAAXABwAAgAAAAIAAAAYABwAAgABAAIAAAAUABwAAgAAAAIAAAAVABwAAgABAAIAAAARABwAAgAAAAIAAAASABwAAgABAAIAAAAPABwAAgAAAAIAAAAQABwAAgABAAIAAAALABwAAgAAAAIAAAAMABwAAgABAAIAAAAJABwAAgAAAAIAAAAKABwAAgABAAIAAAAFABwAAgAAAAIAAAAGABwAAgABAAIAAAAHABwAAgAAAAcAAAAIABwAAgABAAcAAAANABwAAgAAAAcAAAAOABwAAgABAAcAAAAWABwAAgACAAcAAAATABwAAgACAAcAAAAEABwAAgACAAcAAAADABsAAgACAAcAAAACABoAAgACAAcAAAABABkAAgACAAcAAAAYACAAAgACAAcAAAAUACAAAgACAAcAAAAQACAAAgACAAcAAAAMACAAAgACAAcAAAAIACAAAgACAAcAAAAEACAAAgACAAcAAAABACAAAgACAAcAAAACACAAAgAAAAIAAAADACAAAgABAAIAAAAFACAAAgACAAIAAAAGACEAAgACAAIAAAAHACIAAgACAAIAAAAIACMAAgACAAIAAAArACQAAgACAAIAAAApACQAAgAAAAcAAAAqACQAAgABAAcAAAAJACQAAgAAAAcAAAAKACQAAgABAAcAAAALACQAAgAAAAcAAAAMACQAAgABAAcAAAANACQAAgAAAAcAAAAOACQAAgABAAcAAAAPACQAAgAAAAcAAAAQACQAAgABAAcAAAARACQAAgAAAAcAAAASACQAAgABAAcAAAATACQAAgAAAAcAAAAUACQAAgABAAcAAAAVACQAAgAAAAcAAAAWACQAAgABAAcAAAAXACQAAgAAAAcAAAAYACQAAgABAAcAAAAaACQAAgAAAAcAAAAbACQAAgABAAcAAAAcACQAAgAAAAcAAAAdACQAAgABAAcAAAAeACQAAgAAAAcAAAAfACQAAgABAAcAAAAgACQAAgAAAAcAAAAhACQAAgABAAcAAAAjACQAAgAAAAcAAAAkACQAAgABAAcAAAAmACQAAgAAAAcAAAAnACQAAgABAAcAAAAlACQAAgACAAIAAAAZACQAAgACAAIAAAAiACQAAgACAAcAAAAoACQAAgACAAcAAAAwACAAAgACAAcAAAAuACIAAgACAAcAAAAtACMAAgAAAAcAAAAsACQAAgACAAcAAAAuACMAAgABAAcAAAAtACQAAgAAAAcAAAAuACQAAgABAAcAAAARACwAAgAHAAkAAAABABgAAwAAAAUAAAAXACsAAgACAAcAAAAbACsAAgACAAcAAAAjACgAAgACAAcAAAAhACkAAgACAAcAAAA9ACIAAgACAAIAAAAUACkAAgACAAcAAAAFABgAAgACAAgAAAAFABkAAgACAAkAAAAHACcAAgAAAAgAAAAIACcAAgABAAgAAAAGABoACgAUABYAAAAGABsACgAUABcAAAAHABoACgAVABYAAAAHABsACgAVABcAAAAPABoACgAUABYAAAAPABsACgAUABcAAAAQABoACgAVABYAAAAQABsACgAVABcAAAA8ABsACgAUABYAAAA8ABwACgAUABcAAAA9ABsACgAVABYAAAA9ABwACgAVABcAAAA4AB0ACgAUABYAAAA4AB4ACgAUABcAAAA5AB0ACgAVABYAAAA5AB4ACgAVABcAAAAkACYACgAUABYAAAAkACcACgAUABcAAAAlACYACgAVABYAAAAlACcACgAVABcAAAAyACkACgAUABYAAAAyACoACgAUABcAAAAzACkACgAVABYAAAAzACoACgAVABcAAABDAB8ACgAUABYAAABDACAACgAUABcAAABEAB8ACgAVABYAAABEACAACgAVABcAAABNABgACgAUABYAAABNABkACgAUABcAAABOABgACgAVABYAAABOABkACgAVABcAAAADAB4ACgAUABYAAAADAB8ACgAUABcAAAAEAB4ACgAVABYAAAAEAB8ACgAVABcAAAACACkACgAUABYAAAACACoACgAUABcAAAADACkACgAVABYAAAADACoACgAVABcAAAANACYACgAUABYAAAANACcACgAUABcAAAAOACYACgAVABYAAAAOACcACgAVABcAAAAQACcACgAPABAAAAAEACkACgAPABAAAAAFAB8ACgAPABAAAAAMABsACgAPABAAAAAYABsACgAPABAAAAA/ACAACgAPABAAAABGABoACgAPABAAAABJACAACgAPABAAAAAvACoACgAPABAAAAACABkACgAPABAAAAA=")
 tile_set = SubResource("TileSet_2e2pm")
 
 [node name="Entities" type="Node2D" parent="." unique_id=545784370]
 
 [node name="ExitDoor" parent="Entities" unique_id=1589347372 instance=ExtResource("2_qulja")]
-position = Vector2(676, 219)
+position = Vector2(24, 394)
 
 [node name="Key" parent="Entities" unique_id=755897272 instance=ExtResource("3_2e2pm")]
-position = Vector2(707, 216)
+position = Vector2(136, 668)
 
 [node name="Lava" type="Node" parent="Entities" unique_id=1402248984]
 
 [node name="Lava" parent="Entities/Lava" unique_id=1726874747 instance=ExtResource("18_q3aho")]
-position = Vector2(88, 696)
+position = Vector2(120, 695)
+
+[node name="Lava2" parent="Entities/Lava" unique_id=1372291979 instance=ExtResource("18_q3aho")]
+position = Vector2(136, 695)
+
+[node name="Lava3" parent="Entities/Lava" unique_id=1625416218 instance=ExtResource("18_q3aho")]
+position = Vector2(152, 695)
+
+[node name="Lava4" parent="Entities/Lava" unique_id=527310294 instance=ExtResource("18_q3aho")]
+position = Vector2(168, 695)
+
+[node name="Lava5" parent="Entities/Lava" unique_id=960186219 instance=ExtResource("18_q3aho")]
+position = Vector2(184, 695)
+
+[node name="Lava6" parent="Entities/Lava" unique_id=1700329477 instance=ExtResource("18_q3aho")]
+position = Vector2(200, 695)
+
+[node name="Lava7" parent="Entities/Lava" unique_id=1460989672 instance=ExtResource("18_q3aho")]
+position = Vector2(216, 695)
+
+[node name="Lava8" parent="Entities/Lava" unique_id=463721738 instance=ExtResource("18_q3aho")]
+position = Vector2(232, 695)
+
+[node name="Lava9" parent="Entities/Lava" unique_id=1413226666 instance=ExtResource("18_q3aho")]
+position = Vector2(248, 695)
+
+[node name="Lava10" parent="Entities/Lava" unique_id=1168222524 instance=ExtResource("18_q3aho")]
+position = Vector2(264, 695)
+
+[node name="Lava11" parent="Entities/Lava" unique_id=1474404823 instance=ExtResource("18_q3aho")]
+position = Vector2(280, 695)
+
+[node name="Lava12" parent="Entities/Lava" unique_id=1202308803 instance=ExtResource("18_q3aho")]
+position = Vector2(296, 695)
+
+[node name="Lava13" parent="Entities/Lava" unique_id=746057334 instance=ExtResource("18_q3aho")]
+position = Vector2(360, 695)
+
+[node name="Lava15" parent="Entities/Lava" unique_id=525745578 instance=ExtResource("18_q3aho")]
+position = Vector2(392, 695)
+
+[node name="Lava16" parent="Entities/Lava" unique_id=779984134 instance=ExtResource("18_q3aho")]
+position = Vector2(424, 695)
+
+[node name="Lava18" parent="Entities/Lava" unique_id=74779326 instance=ExtResource("18_q3aho")]
+position = Vector2(456, 695)
+
+[node name="Lava19" parent="Entities/Lava" unique_id=870483172 instance=ExtResource("18_q3aho")]
+position = Vector2(488, 695)
+
+[node name="Lava20" parent="Entities/Lava" unique_id=462313811 instance=ExtResource("18_q3aho")]
+position = Vector2(504, 695)
+
+[node name="Lava21" parent="Entities/Lava" unique_id=239573202 instance=ExtResource("18_q3aho")]
+position = Vector2(520, 695)
+
+[node name="Lava22" parent="Entities/Lava" unique_id=2035696218 instance=ExtResource("18_q3aho")]
+position = Vector2(536, 695)
+
+[node name="Lava23" parent="Entities/Lava" unique_id=335086609 instance=ExtResource("18_q3aho")]
+position = Vector2(584, 695)
+
+[node name="Lava24" parent="Entities/Lava" unique_id=1085780264 instance=ExtResource("18_q3aho")]
+position = Vector2(600, 695)
+
+[node name="Lava25" parent="Entities/Lava" unique_id=675834689 instance=ExtResource("18_q3aho")]
+position = Vector2(616, 695)
+
+[node name="Lava26" parent="Entities/Lava" unique_id=81987528 instance=ExtResource("18_q3aho")]
+position = Vector2(632, 695)
+
+[node name="Lava27" parent="Entities/Lava" unique_id=1619049324 instance=ExtResource("18_q3aho")]
+position = Vector2(648, 695)
+
+[node name="Lava28" parent="Entities/Lava" unique_id=692629503 instance=ExtResource("18_q3aho")]
+position = Vector2(664, 695)
+
+[node name="Lava29" parent="Entities/Lava" unique_id=855062258 instance=ExtResource("18_q3aho")]
+position = Vector2(680, 695)
+
+[node name="Lava30" parent="Entities/Lava" unique_id=1416898560 instance=ExtResource("18_q3aho")]
+position = Vector2(696, 695)
+
+[node name="Lava31" parent="Entities/Lava" unique_id=1399652848 instance=ExtResource("18_q3aho")]
+position = Vector2(712, 695)
+
+[node name="Lava32" parent="Entities/Lava" unique_id=1002110602 instance=ExtResource("18_q3aho")]
+position = Vector2(728, 695)
+
+[node name="Lava33" parent="Entities/Lava" unique_id=515365053 instance=ExtResource("18_q3aho")]
+position = Vector2(744, 695)
+
+[node name="Lava34" parent="Entities/Lava" unique_id=1910748391 instance=ExtResource("18_q3aho")]
+position = Vector2(792, 695)
+
+[node name="Lava35" parent="Entities/Lava" unique_id=2095610059 instance=ExtResource("18_q3aho")]
+position = Vector2(840, 695)
+
+[node name="Lava36" parent="Entities/Lava" unique_id=228456336 instance=ExtResource("18_q3aho")]
+position = Vector2(856, 695)
+
+[node name="Lava37" parent="Entities/Lava" unique_id=697953450 instance=ExtResource("18_q3aho")]
+position = Vector2(872, 695)
+
+[node name="Lava38" parent="Entities/Lava" unique_id=1959893869 instance=ExtResource("18_q3aho")]
+position = Vector2(888, 695)
+
+[node name="Lava39" parent="Entities/Lava" unique_id=93324608 instance=ExtResource("18_q3aho")]
+position = Vector2(904, 695)
+
+[node name="Lava40" parent="Entities/Lava" unique_id=793666556 instance=ExtResource("18_q3aho")]
+position = Vector2(920, 695)
+
+[node name="Lava41" parent="Entities/Lava" unique_id=1988904794 instance=ExtResource("18_q3aho")]
+position = Vector2(936, 695)
+
+[node name="Lava42" parent="Entities/Lava" unique_id=468179653 instance=ExtResource("18_q3aho")]
+position = Vector2(952, 695)
+
+[node name="Lava43" parent="Entities/Lava" unique_id=1787672292 instance=ExtResource("18_q3aho")]
+position = Vector2(968, 695)
+
+[node name="Lava44" parent="Entities/Lava" unique_id=183690470 instance=ExtResource("18_q3aho")]
+position = Vector2(984, 695)
+
+[node name="Lava45" parent="Entities/Lava" unique_id=365520581 instance=ExtResource("18_q3aho")]
+position = Vector2(1000, 695)
+
+[node name="Lava46" parent="Entities/Lava" unique_id=484109620 instance=ExtResource("18_q3aho")]
+position = Vector2(1016, 695)
+
+[node name="Lava47" parent="Entities/Lava" unique_id=1005730628 instance=ExtResource("18_q3aho")]
+position = Vector2(1032, 695)
+
+[node name="Lava48" parent="Entities/Lava" unique_id=339074683 instance=ExtResource("18_q3aho")]
+position = Vector2(1048, 695)
+
+[node name="Lava49" parent="Entities/Lava" unique_id=844213625 instance=ExtResource("18_q3aho")]
+position = Vector2(1064, 695)
+
+[node name="Lava50" parent="Entities/Lava" unique_id=1288483193 instance=ExtResource("18_q3aho")]
+position = Vector2(1081, 695)
+
+[node name="Lava51" parent="Entities/Lava" unique_id=1505895955 instance=ExtResource("18_q3aho")]
+position = Vector2(1097, 695)
+
+[node name="Lava52" parent="Entities/Lava" unique_id=720675221 instance=ExtResource("18_q3aho")]
+position = Vector2(1113, 695)
+
+[node name="Lava53" parent="Entities/Lava" unique_id=779537517 instance=ExtResource("18_q3aho")]
+position = Vector2(1129, 695)
+
+[node name="Lava54" parent="Entities/Lava" unique_id=544954790 instance=ExtResource("18_q3aho")]
+position = Vector2(1145, 695)
+
+[node name="Lava55" parent="Entities/Lava" unique_id=363740592 instance=ExtResource("18_q3aho")]
+position = Vector2(1161, 695)
+
+[node name="Lava56" parent="Entities/Lava" unique_id=1263379331 instance=ExtResource("18_q3aho")]
+position = Vector2(1177, 695)
+
+[node name="Lava57" parent="Entities/Lava" unique_id=1897132588 instance=ExtResource("18_q3aho")]
+position = Vector2(1193, 695)
+
+[node name="Lava58" parent="Entities/Lava" unique_id=1996759863 instance=ExtResource("18_q3aho")]
+position = Vector2(1209, 695)
+
+[node name="Lava59" parent="Entities/Lava" unique_id=1432685341 instance=ExtResource("18_q3aho")]
+position = Vector2(1225, 695)
+
+[node name="Lava60" parent="Entities/Lava" unique_id=1825775270 instance=ExtResource("18_q3aho")]
+position = Vector2(1241, 695)
+
+[node name="Lava61" parent="Entities/Lava" unique_id=1240679149 instance=ExtResource("18_q3aho")]
+position = Vector2(1256, 695)
+
+[node name="Lava62" parent="Entities/Lava" unique_id=635669347 instance=ExtResource("18_q3aho")]
+position = Vector2(152, 569)
+
+[node name="Lava63" parent="Entities/Lava" unique_id=1451730153 instance=ExtResource("18_q3aho")]
+position = Vector2(168, 569)
+
+[node name="Lava64" parent="Entities/Lava" unique_id=1933234764 instance=ExtResource("18_q3aho")]
+position = Vector2(184, 569)
+
+[node name="Lava65" parent="Entities/Lava" unique_id=2025564281 instance=ExtResource("18_q3aho")]
+position = Vector2(200, 569)
+
+[node name="Lava66" parent="Entities/Lava" unique_id=701656287 instance=ExtResource("18_q3aho")]
+position = Vector2(216, 569)
+
+[node name="Lava67" parent="Entities/Lava" unique_id=2022899796 instance=ExtResource("18_q3aho")]
+position = Vector2(232, 569)
+
+[node name="Lava68" parent="Entities/Lava" unique_id=1906571576 instance=ExtResource("18_q3aho")]
+position = Vector2(248, 569)
+
+[node name="Lava69" parent="Entities/Lava" unique_id=386640037 instance=ExtResource("18_q3aho")]
+position = Vector2(264, 569)
+
+[node name="Lava70" parent="Entities/Lava" unique_id=547507590 instance=ExtResource("18_q3aho")]
+position = Vector2(280, 569)
+
+[node name="Lava71" parent="Entities/Lava" unique_id=1938084518 instance=ExtResource("18_q3aho")]
+position = Vector2(296, 569)
+
+[node name="Lava72" parent="Entities/Lava" unique_id=693202708 instance=ExtResource("18_q3aho")]
+position = Vector2(312, 569)
+
+[node name="Lava73" parent="Entities/Lava" unique_id=1771428460 instance=ExtResource("18_q3aho")]
+position = Vector2(328, 569)
+
+[node name="Lava74" parent="Entities/Lava" unique_id=1230089117 instance=ExtResource("18_q3aho")]
+position = Vector2(344, 569)
+
+[node name="Lava75" parent="Entities/Lava" unique_id=1195732792 instance=ExtResource("18_q3aho")]
+position = Vector2(360, 569)
+
+[node name="Lava76" parent="Entities/Lava" unique_id=901686291 instance=ExtResource("18_q3aho")]
+position = Vector2(376, 569)
+
+[node name="Lava77" parent="Entities/Lava" unique_id=813591979 instance=ExtResource("18_q3aho")]
+position = Vector2(392, 569)
+
+[node name="Lava78" parent="Entities/Lava" unique_id=902115035 instance=ExtResource("18_q3aho")]
+position = Vector2(408, 569)
+
+[node name="Lava79" parent="Entities/Lava" unique_id=409852576 instance=ExtResource("18_q3aho")]
+position = Vector2(424, 569)
+
+[node name="Lava80" parent="Entities/Lava" unique_id=2064359356 instance=ExtResource("18_q3aho")]
+position = Vector2(440, 569)
+
+[node name="Lava81" parent="Entities/Lava" unique_id=988657212 instance=ExtResource("18_q3aho")]
+position = Vector2(456, 569)
+
+[node name="Lava82" parent="Entities/Lava" unique_id=647106679 instance=ExtResource("18_q3aho")]
+position = Vector2(472, 569)
+
+[node name="Lava83" parent="Entities/Lava" unique_id=106752645 instance=ExtResource("18_q3aho")]
+position = Vector2(488, 569)
+
+[node name="Lava84" parent="Entities/Lava" unique_id=273355582 instance=ExtResource("18_q3aho")]
+position = Vector2(504, 569)
+
+[node name="Lava85" parent="Entities/Lava" unique_id=293233493 instance=ExtResource("18_q3aho")]
+position = Vector2(520, 569)
+
+[node name="Lava86" parent="Entities/Lava" unique_id=2073920201 instance=ExtResource("18_q3aho")]
+position = Vector2(536, 569)
+
+[node name="Lava87" parent="Entities/Lava" unique_id=503503609 instance=ExtResource("18_q3aho")]
+position = Vector2(552, 569)
+
+[node name="Lava88" parent="Entities/Lava" unique_id=951697570 instance=ExtResource("18_q3aho")]
+position = Vector2(568, 569)
+
+[node name="Lava89" parent="Entities/Lava" unique_id=1552396416 instance=ExtResource("18_q3aho")]
+position = Vector2(584, 569)
+
+[node name="Lava90" parent="Entities/Lava" unique_id=977585479 instance=ExtResource("18_q3aho")]
+position = Vector2(600, 569)
+
+[node name="Lava91" parent="Entities/Lava" unique_id=1316970756 instance=ExtResource("18_q3aho")]
+position = Vector2(616, 569)
+
+[node name="Lava92" parent="Entities/Lava" unique_id=1303259380 instance=ExtResource("18_q3aho")]
+position = Vector2(632, 569)
+
+[node name="Lava93" parent="Entities/Lava" unique_id=1652703989 instance=ExtResource("18_q3aho")]
+position = Vector2(648, 569)
+
+[node name="Lava94" parent="Entities/Lava" unique_id=128390842 instance=ExtResource("18_q3aho")]
+position = Vector2(664, 569)
+
+[node name="Lava95" parent="Entities/Lava" unique_id=1957657571 instance=ExtResource("18_q3aho")]
+position = Vector2(680, 569)
+
+[node name="Lava96" parent="Entities/Lava" unique_id=633822089 instance=ExtResource("18_q3aho")]
+position = Vector2(696, 569)
+
+[node name="Lava97" parent="Entities/Lava" unique_id=1951184080 instance=ExtResource("18_q3aho")]
+position = Vector2(712, 569)
 
 [node name="Gem" type="Node" parent="Entities" unique_id=684289978]
 
 [node name="Gem" parent="Entities/Gem" unique_id=376977436 instance=ExtResource("6_qnd2q")]
-position = Vector2(67, 237)
+position = Vector2(72, 503)
+
+[node name="Gem2" parent="Entities/Gem" unique_id=1661542554 instance=ExtResource("6_qnd2q")]
+position = Vector2(199, 502)
+
+[node name="Gem3" parent="Entities/Gem" unique_id=688949512 instance=ExtResource("6_qnd2q")]
+position = Vector2(328, 502)
+
+[node name="Gem4" parent="Entities/Gem" unique_id=1398536936 instance=ExtResource("6_qnd2q")]
+position = Vector2(424, 403)
+
+[node name="Gem5" parent="Entities/Gem" unique_id=1024034663 instance=ExtResource("6_qnd2q")]
+position = Vector2(425, 470)
+
+[node name="Gem6" parent="Entities/Gem" unique_id=1370199128 instance=ExtResource("6_qnd2q")]
+position = Vector2(488, 470)
+
+[node name="Gem7" parent="Entities/Gem" unique_id=755715024 instance=ExtResource("6_qnd2q")]
+position = Vector2(553, 470)
+
+[node name="Gem8" parent="Entities/Gem" unique_id=1608599285 instance=ExtResource("6_qnd2q")]
+position = Vector2(615, 470)
+
+[node name="Gem9" parent="Entities/Gem" unique_id=1514688045 instance=ExtResource("6_qnd2q")]
+position = Vector2(680, 470)
+
+[node name="Gem10" parent="Entities/Gem" unique_id=332783143 instance=ExtResource("6_qnd2q")]
+position = Vector2(744, 470)
+
+[node name="Gem11" parent="Entities/Gem" unique_id=724401365 instance=ExtResource("6_qnd2q")]
+position = Vector2(808, 470)
+
+[node name="Gem12" parent="Entities/Gem" unique_id=710462633 instance=ExtResource("6_qnd2q")]
+position = Vector2(872, 470)
+
+[node name="Gem13" parent="Entities/Gem" unique_id=1328165505 instance=ExtResource("6_qnd2q")]
+position = Vector2(872, 405)
+
+[node name="Gem21" parent="Entities/Gem" unique_id=1471420729 instance=ExtResource("6_qnd2q")]
+position = Vector2(1250, 405)
+
+[node name="Gem14" parent="Entities/Gem" unique_id=1666091459 instance=ExtResource("6_qnd2q")]
+position = Vector2(808, 405)
+
+[node name="Gem15" parent="Entities/Gem" unique_id=1626047736 instance=ExtResource("6_qnd2q")]
+position = Vector2(744, 405)
+
+[node name="Gem16" parent="Entities/Gem" unique_id=1476167429 instance=ExtResource("6_qnd2q")]
+position = Vector2(680, 405)
+
+[node name="Gem17" parent="Entities/Gem" unique_id=1601955528 instance=ExtResource("6_qnd2q")]
+position = Vector2(615, 405)
+
+[node name="Gem18" parent="Entities/Gem" unique_id=12571575 instance=ExtResource("6_qnd2q")]
+position = Vector2(552, 405)
+
+[node name="Gem19" parent="Entities/Gem" unique_id=558230569 instance=ExtResource("6_qnd2q")]
+position = Vector2(488, 405)
+
+[node name="Gem20" parent="Entities/Gem" unique_id=107427207 instance=ExtResource("6_qnd2q")]
+position = Vector2(616, 629)
 
 [node name="Coin" parent="Entities/Gem" unique_id=1136703607 instance=ExtResource("18_lap61")]
-position = Vector2(116, 228)
+position = Vector2(168, 669)
 
-[node name="Sapphire" parent="Entities/Gem" unique_id=1357723012 instance=ExtResource("19_a2yvy")]
-position = Vector2(154, 232)
+[node name="Coin2" parent="Entities/Gem" unique_id=1168984047 instance=ExtResource("18_lap61")]
+position = Vector2(200, 669)
 
-[node name="Ruby" parent="Entities/Gem" unique_id=234548664 instance=ExtResource("20_wpber")]
-position = Vector2(193, 233)
+[node name="Coin3" parent="Entities/Gem" unique_id=792926518 instance=ExtResource("18_lap61")]
+position = Vector2(231, 669)
+
+[node name="Coin4" parent="Entities/Gem" unique_id=1646966018 instance=ExtResource("18_lap61")]
+position = Vector2(263, 669)
+
+[node name="Coin5" parent="Entities/Gem" unique_id=1189342483 instance=ExtResource("18_lap61")]
+position = Vector2(295, 669)
+
+[node name="Coin6" parent="Entities/Gem" unique_id=501020285 instance=ExtResource("18_lap61")]
+position = Vector2(408, 679)
+
+[node name="Coin7" parent="Entities/Gem" unique_id=446948698 instance=ExtResource("18_lap61")]
+position = Vector2(376, 632)
+
+[node name="Coin8" parent="Entities/Gem" unique_id=756924214 instance=ExtResource("18_lap61")]
+position = Vector2(472, 680)
+
+[node name="Coin9" parent="Entities/Gem" unique_id=1426966656 instance=ExtResource("18_lap61")]
+position = Vector2(504, 633)
+
+[node name="Coin10" parent="Entities/Gem" unique_id=571972290 instance=ExtResource("18_lap61")]
+position = Vector2(600, 669)
+
+[node name="Coin11" parent="Entities/Gem" unique_id=1123131105 instance=ExtResource("18_lap61")]
+position = Vector2(632, 670)
+
+[node name="Coin12" parent="Entities/Gem" unique_id=1911131364 instance=ExtResource("18_lap61")]
+position = Vector2(664, 669)
+
+[node name="Coin13" parent="Entities/Gem" unique_id=270299930 instance=ExtResource("18_lap61")]
+position = Vector2(696, 670)
+
+[node name="Coin14" parent="Entities/Gem" unique_id=1243414057 instance=ExtResource("18_lap61")]
+position = Vector2(729, 669)
+
+[node name="Coin15" parent="Entities/Gem" unique_id=974424140 instance=ExtResource("18_lap61")]
+position = Vector2(920, 584)
+
+[node name="Coin16" parent="Entities/Gem" unique_id=1863892494 instance=ExtResource("18_lap61")]
+position = Vector2(888, 615)
+
+[node name="Coin17" parent="Entities/Gem" unique_id=2107498223 instance=ExtResource("18_lap61")]
+position = Vector2(952, 551)
+
+[node name="Coin18" parent="Entities/Gem" unique_id=1789526483 instance=ExtResource("18_lap61")]
+position = Vector2(1049, 499)
+
+[node name="Coin19" parent="Entities/Gem" unique_id=754900151 instance=ExtResource("18_lap61")]
+position = Vector2(1128, 499)
+
+[node name="Coin26" parent="Entities/Gem" unique_id=847534695 instance=ExtResource("18_lap61")]
+position = Vector2(1254, 486)
+
+[node name="Coin20" parent="Entities/Gem" unique_id=859400037 instance=ExtResource("18_lap61")]
+position = Vector2(840, 440)
+
+[node name="Coin21" parent="Entities/Gem" unique_id=1009345380 instance=ExtResource("18_lap61")]
+position = Vector2(713, 439)
+
+[node name="Coin22" parent="Entities/Gem" unique_id=630639196 instance=ExtResource("18_lap61")]
+position = Vector2(584, 440)
+
+[node name="Coin23" parent="Entities/Gem" unique_id=60695865 instance=ExtResource("18_lap61")]
+position = Vector2(455, 441)
+
+[node name="Coin24" parent="Entities/Gem" unique_id=92185418 instance=ExtResource("18_lap61")]
+position = Vector2(312, 439)
+
+[node name="Coin25" parent="Entities/Gem" unique_id=1232760513 instance=ExtResource("18_lap61")]
+position = Vector2(160, 437)
 
 [node name="Heart" parent="Entities/Gem" unique_id=1298033791 instance=ExtResource("21_os03k")]
-position = Vector2(282, 238)
+position = Vector2(690, 629)
 
-[node name="Emerald" parent="Entities/Gem" unique_id=1624458890 instance=ExtResource("22_whv4a")]
-position = Vector2(237, 234)
+[node name="Heart2" parent="Entities/Gem" unique_id=51203805 instance=ExtResource("21_os03k")]
+position = Vector2(777, 500)
 
 [node name="Monsters" type="Node" parent="Entities" unique_id=783664112]
 
 [node name="Monster" parent="Entities/Monsters" unique_id=745266041 instance=ExtResource("8_vgpa5")]
-position = Vector2(630, 219)
+position = Vector2(440, 604)
+
+[node name="Monster2" parent="Entities/Monsters" unique_id=1403683018 instance=ExtResource("8_vgpa5")]
+position = Vector2(1029, 647)
+
+[node name="Monster3" parent="Entities/Monsters" unique_id=756279224 instance=ExtResource("8_vgpa5")]
+position = Vector2(1066, 616)
+
+[node name="Monster4" parent="Entities/Monsters" unique_id=1192404076 instance=ExtResource("8_vgpa5")]
+position = Vector2(1105, 584)
+
+[node name="Monster5" parent="Entities/Monsters" unique_id=449584822 instance=ExtResource("8_vgpa5")]
+position = Vector2(248, 401)
+
+[node name="Monster6" parent="Entities/Monsters" unique_id=445724913 instance=ExtResource("8_vgpa5")]
+position = Vector2(247, 474)
 
 [node name="Gun" parent="Entities" unique_id=1994237845 instance=ExtResource("10_fogwp")]
-position = Vector2(584, 228)
+position = Vector2(30, 503)
 
 [node name="Fire" type="Node" parent="Entities" unique_id=573784187]
 
 [node name="Fire" parent="Entities/Fire" unique_id=317862174 instance=ExtResource("27_yd5dv")]
-position = Vector2(521, 225)
+position = Vector2(105, 520)
 
-[node name="Jetpack" parent="Entities" unique_id=1635749776 instance=ExtResource("28_pkq3u")]
-position = Vector2(362, 223)
+[node name="Fire2" parent="Entities/Fire" unique_id=583776000 instance=ExtResource("27_yd5dv")]
+position = Vector2(120, 536)
 
-[node name="SignBoard" parent="Entities" unique_id=1567757057 instance=ExtResource("26_os03k")]
-position = Vector2(405, 220)
-message = "Exit directly above. "
+[node name="Fire3" parent="Entities/Fire" unique_id=432750105 instance=ExtResource("27_yd5dv")]
+position = Vector2(136, 552)
+
+[node name="Fire4" parent="Entities/Fire" unique_id=272292203 instance=ExtResource("27_yd5dv")]
+position = Vector2(728, 552)
+
+[node name="Fire5" parent="Entities/Fire" unique_id=1465459618 instance=ExtResource("27_yd5dv")]
+position = Vector2(744, 536)
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=497194717]
 
 [node name="PlayerSpawn" type="Marker2D" parent="SpawnPoints" unique_id=1799908622]
-position = Vector2(43, 592)
+position = Vector2(28, 674)
 
 [node name="CameraLimits" type="Node2D" parent="." unique_id=1712765749]
 

@@ -12499,6 +12499,7 @@ sources/5 = SubResource("TileSetAtlasSource_qcfd1")
 
 [node name="Level02" type="Node2D" unique_id=602118488]
 metadata/_edit_horizontal_guides_ = [529.0]
+metadata/_edit_lock_ = true
 
 [node name="CameraLimits" type="Node2D" parent="." unique_id=65082762]
 
@@ -12588,7 +12589,8 @@ position = Vector2(312, 615)
 
 [node name="SignBoard" parent="Entities/Gems" unique_id=1567757057 instance=ExtResource("10_sotb0")]
 position = Vector2(568, 649)
-message = "Hold Ctrl to use Jetpack"
+message = "Hold Ctrl to use Jetpack
+Will not Consume Fuel if not Moving"
 
 [node name="Fire" type="Node" parent="Entities" unique_id=1518479255]
 

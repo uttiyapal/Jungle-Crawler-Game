@@ -23774,7 +23774,8 @@ sources/11 = SubResource("TileSetAtlasSource_whv4a")
 sources/12 = SubResource("TileSetAtlasSource_c03um")
 sources/13 = SubResource("TileSetAtlasSource_ssj88")
 
-[node name="Level03" type="Node2D" unique_id=308517454]
+[node name="Level04" type="Node2D" unique_id=308517454]
+metadata/_edit_lock_ = true
 
 [node name="ParallaxSky" type="Parallax2D" parent="." unique_id=620550835]
 scroll_scale = Vector2(0.2, 0.2)
@@ -23979,9 +23980,6 @@ position = Vector2(1208, 696)
 
 [node name="Gem" type="Node" parent="Entities" unique_id=684289978]
 
-[node name="Gem" parent="Entities/Gem" unique_id=376977436 instance=ExtResource("6_qnd2q")]
-position = Vector2(67, 237)
-
 [node name="Gem7" parent="Entities/Gem" unique_id=102715018 instance=ExtResource("6_qnd2q")]
 position = Vector2(1129, 470)
 
@@ -24048,9 +24046,6 @@ position = Vector2(1095, 665)
 [node name="Coin16" parent="Entities/Gem" unique_id=159545715 instance=ExtResource("18_lap61")]
 position = Vector2(743, 537)
 
-[node name="Coin23" parent="Entities/Gem" unique_id=1232638692 instance=ExtResource("18_lap61")]
-position = Vector2(110, 234)
-
 [node name="Coin24" parent="Entities/Gem" unique_id=1762446862 instance=ExtResource("18_lap61")]
 position = Vector2(152, 397)
 
@@ -24102,9 +24097,6 @@ position = Vector2(1063, 537)
 [node name="Coin22" parent="Entities/Gem" unique_id=1402123925 instance=ExtResource("18_lap61")]
 position = Vector2(1129, 537)
 
-[node name="Sapphire" parent="Entities/Gem" unique_id=1357723012 instance=ExtResource("19_a2yvy")]
-position = Vector2(154, 232)
-
 [node name="Sapphire2" parent="Entities/Gem" unique_id=1032522478 instance=ExtResource("19_a2yvy")]
 position = Vector2(822, 420)
 
@@ -24116,9 +24108,6 @@ position = Vector2(1032, 421)
 
 [node name="Sapphire5" parent="Entities/Gem" unique_id=190282263 instance=ExtResource("19_a2yvy")]
 position = Vector2(1117, 422)
-
-[node name="Ruby" parent="Entities/Gem" unique_id=234548664 instance=ExtResource("20_wpber")]
-position = Vector2(193, 233)
 
 [node name="Ruby2" parent="Entities/Gem" unique_id=2070528234 instance=ExtResource("20_wpber")]
 position = Vector2(776, 501)
@@ -24140,9 +24129,6 @@ position = Vector2(1096, 502)
 
 [node name="Heart" parent="Entities/Gem" unique_id=1298033791 instance=ExtResource("21_os03k")]
 position = Vector2(1207, 422)
-
-[node name="Emerald" parent="Entities/Gem" unique_id=1624458890 instance=ExtResource("22_whv4a")]
-position = Vector2(237, 234)
 
 [node name="Emerald2" parent="Entities/Gem" unique_id=1768310503 instance=ExtResource("22_whv4a")]
 position = Vector2(168, 628)
@@ -24219,12 +24205,12 @@ position = Vector2(24, 503)
 
 [node name="SignBoard" parent="Entities" unique_id=1567757057 instance=ExtResource("26_os03k")]
 position = Vector2(56, 537)
-message = "Exit directly above. "
+message = "Exit Door Directly Above "
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=497194717]
 
 [node name="PlayerSpawn" type="Marker2D" parent="SpawnPoints" unique_id=1799908622]
-position = Vector2(43, 592)
+position = Vector2(29, 677)
 
 [node name="CameraLimits" type="Node2D" parent="." unique_id=1712765749]
 
