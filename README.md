@@ -6,6 +6,10 @@
 
 A 2D platformer game paying homage to the MS-DOS games of the 90s , made on the Godot Engine using GDScript as an educational project. Players must navigate hazardous levels, collect valuable items, defeat enemies, and reach the exit while managing health, lives, and equipment.
 
+You can play it online [here](https://uttiya.itch.io/jungle-crawler) on Itch.
+
+Feel free to use the repository as a template to develop your own 2D platformer game, in accordance with the MIT License.
+
 ---
 
 ## 🎮 Features
@@ -71,7 +75,7 @@ Collect useful items along the way:
 - 🔫 Gun to defeat enemies
 - 🚀 Jetpack to access difficult areas
 
-Reach the exit door to advance to the next level. Complete all ten levels to finish the game.
+Reach the exit door to advance to the next level. Complete all five levels to finish the game.
 
 ---
 
@@ -80,13 +84,13 @@ Reach the exit door to advance to the next level. Complete all ten levels to fin
 1. Clone this repository
 
 ```bash
-https://github.com/uttiyapal/Dungeon-Crawler-Game.git
+https://github.com/uttiyapal/Jungle-Crawler-Game.git
 ```
 
 2. Open the project in **Godot Engine 4.6**
 
 3. Press **F5** to run.
 
-4. Alternatively you can play it online [here]()  
+4. Alternatively you can play it online [here](https://uttiya.itch.io/jungle-crawler).
 
 ---
