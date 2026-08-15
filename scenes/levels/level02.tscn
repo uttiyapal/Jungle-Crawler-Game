@@ -12589,7 +12589,7 @@ position = Vector2(312, 615)
 
 [node name="SignBoard" parent="Entities/Gems" unique_id=1567757057 instance=ExtResource("10_sotb0")]
 position = Vector2(568, 649)
-message = "Hold Ctrl to use Jetpack
+message = "Hold Shift to use Jetpack
 Will not Consume Fuel if not Moving"
 
 [node name="Fire" type="Node" parent="Entities" unique_id=1518479255]
